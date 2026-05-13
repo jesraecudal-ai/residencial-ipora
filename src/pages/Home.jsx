@@ -148,23 +148,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PHOTO STRIP */}
-      <section className="py-0 overflow-hidden">
-        <div className="grid grid-cols-3 h-72 md:h-96">
-          {[
-            'https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&q=80',
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80',
-            'https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&q=80',
-          ].map((url, i) => (
-            <div key={i} className="overflow-hidden relative group">
-              <img
-                src={url}
-                alt="Vida en Residencial Iporá, adultos mayores en ambiente cálido"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-navy/20 group-hover:bg-navy/5 transition-colors duration-500" />
+      {/* PHOTO GALLERY — fotos reales */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-5 md:px-10">
+          <RevealSection>
+            <div className="text-center mb-10">
+              <span className="font-inter text-sm text-trust-blue uppercase tracking-widest block mb-3">Nuestro hogar</span>
+              <h2 className="font-cormorant text-4xl md:text-5xl text-navy font-light">
+                Así es Residencial Iporá
+              </h2>
             </div>
-          ))}
+          </RevealSection>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+            {[
+              { url: 'https://media.base44.com/images/public/6a050510a0e721e56d922807/b1c3526d8_WhatsAppImage2026-05-13at203908.jpg', alt: 'Frente de Residencial Iporá con cartel y jardín en Tacuarembó', large: true },
+              { url: 'https://media.base44.com/images/public/6a050510a0e721e56d922807/5eb7c680e_WhatsAppImage2026-05-13at2039081.jpg', alt: 'Jardín y entrada de Residencial Iporá, Balneario Iporá' },
+              { url: 'https://media.base44.com/images/public/6a050510a0e721e56d922807/9ffb326cd_WhatsAppImage2026-05-13at2039091.jpg', alt: 'Galería y patio exterior con plantas en Residencial Iporá' },
+              { url: 'https://media.base44.com/images/public/6a050510a0e721e56d922807/2400dd1d8_WhatsAppImage2026-05-13at2039082.jpg', alt: 'Vista del jardín con árboles nativos, Residencial Iporá' },
+              { url: 'https://media.base44.com/images/public/6a050510a0e721e56d922807/6f059361f_WhatsAppImage2026-05-13at203909.jpg', alt: 'Entrada principal de Residencial Iporá con horarios de visita' },
+            ].map((photo, i) => (
+              <RevealSection key={i} delay={i * 80} className={photo.large ? 'md:col-span-2 md:row-span-1' : ''}>
+                <div className={`overflow-hidden rounded-2xl group ${photo.large ? 'h-64 md:h-80' : 'h-52 md:h-64'}`}>
+                  <img
+                    src={photo.url}
+                    alt={photo.alt}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+              </RevealSection>
+            ))}
+          </div>
         </div>
       </section>
 
