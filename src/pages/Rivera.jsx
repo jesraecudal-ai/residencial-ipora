@@ -79,7 +79,7 @@ export default function Rivera() {
           <span className="font-cormorant text-ivory text-lg font-light">Residencial Iporá</span>
         </Link>
         <a
-          href="https://wa.me/59891064292?text=Hola%20Sonia%2C%20me%20interesa%20el%20Proyecto%20Rivera"
+          href="https://wa.me/59898282938?text=Hola%20Nicolás%2C%20me%20interesa%20el%20Proyecto%20Rivera"
           target="_blank"
           rel="noopener noreferrer"
           className="cta-btn cta-btn-gold px-5 py-2 rounded-full font-inter font-medium text-obsidian bg-champagne hover:brightness-110 transition-all text-sm"
@@ -134,7 +134,7 @@ export default function Rivera() {
             </div>
 
             <a
-              href="https://wa.me/59891064292?text=Hola%20Sonia%2C%20me%20interesa%20pre-reservar%20en%20Residencial%20Boutique%20Rivera"
+              href="https://wa.me/59898282938?text=Hola%20Nicolás%2C%20me%20interesa%20pre-reservar%20en%20Residencial%20Boutique%20Rivera"
               target="_blank"
               rel="noopener noreferrer"
               className="cta-btn cta-btn-gold inline-flex items-center gap-2 px-8 py-4 rounded-full font-inter font-medium text-obsidian bg-champagne hover:brightness-110 transition-all"
@@ -250,20 +250,20 @@ export default function Rivera() {
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                   <a
-                    href="https://wa.me/59891064292?text=Hola%20Sonia%2C%20me%20interesa%20pre-reservar%20en%20Residencial%20Boutique%20Rivera.%20Quisiera%20conocer%20el%20precio%20y%20el%20proceso%20de%20seña."
+                    href="https://wa.me/59898282938?text=Hola%20Nicolás%2C%20me%20interesa%20pre-reservar%20en%20Residencial%20Boutique%20Rivera.%20Quisiera%20conocer%20el%20precio%20y%20el%20proceso%20de%20seña."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="cta-btn cta-btn-gold px-8 py-4 rounded-full font-inter font-medium text-obsidian bg-champagne hover:brightness-110 transition-all inline-flex items-center gap-2 justify-center"
                   >
-                    Hablar con Sonia — Fundadora
+                    Hablar con Nicolás — Co-Fundador
                   </a>
                   <a
-                    href="https://wa.me/59898282938?text=Hola%20Nicolás%2C%20me%20interesa%20pre-reservar%20en%20Residencial%20Boutique%20Rivera."
+                    href="https://wa.me/59891064292?text=Hola%20Sonia%2C%20me%20interesa%20pre-reservar%20en%20Residencial%20Boutique%20Rivera."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="cta-btn cta-btn-gold px-8 py-4 rounded-full font-inter font-medium text-champagne border border-champagne/40 hover:bg-champagne/10 transition-all inline-flex items-center gap-2 justify-center"
                   >
-                    Hablar con Nicolás — Co-Fundador
+                    Hablar con Sonia — Fundadora
                   </a>
                 </div>
 
@@ -317,7 +317,7 @@ export default function Rivera() {
       {/* Floating WhatsApp */}
       <div className="fixed bottom-6 right-5 z-50">
         <a
-          href="https://wa.me/59891064292?text=Hola%20Sonia%2C%20me%20interesa%20Proyecto%20Rivera%20Boutique"
+          href="https://wa.me/59898282938?text=Hola%20Nicolás%2C%20me%20interesa%20Proyecto%20Rivera%20Boutique"
           target="_blank"
           rel="noopener noreferrer"
           className="whatsapp-pulse w-14 h-14 rounded-full flex items-center justify-center shadow-xl"
