@@ -247,7 +247,7 @@ export default function Rivera() {
                   El precio exacto mensual se revela en consulta privada. Inversión estimada: desde USD 4.000/mes.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                <div className="flex justify-center mb-6">
                   <a
                     href="https://wa.me/59898282938?text=Hola%20Nicolás%2C%20me%20interesa%20pre-reservar%20en%20Residencial%20Boutique%20Rivera.%20Quisiera%20conocer%20el%20precio%20y%20el%20proceso%20de%20seña."
                     target="_blank"
@@ -255,14 +255,6 @@ export default function Rivera() {
                     className="cta-btn cta-btn-gold px-8 py-4 rounded-full font-inter font-medium text-obsidian bg-champagne hover:brightness-110 transition-all inline-flex items-center gap-2 justify-center"
                   >
                     Hablar con Nicolás — Co-Fundador
-                  </a>
-                  <a
-                    href="https://wa.me/59891064292?text=Hola%20Sonia%2C%20me%20interesa%20pre-reservar%20en%20Residencial%20Boutique%20Rivera."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="cta-btn cta-btn-gold px-8 py-4 rounded-full font-inter font-medium text-champagne border border-champagne/40 hover:bg-champagne/10 transition-all inline-flex items-center gap-2 justify-center"
-                  >
-                    Hablar con Sonia — Fundadora
                   </a>
                 </div>
 
