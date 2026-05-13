@@ -111,9 +111,15 @@ export default function Rivera() {
               <em className="text-champagne italic">Iporá Boutique</em>
             </h1>
 
-            <p className="font-inter text-ivory/60 text-lg max-w-xl leading-relaxed mb-10">
-              Una experiencia de cuidado absolutamente exclusiva para adultos mayores que merecen lo mejor. Pocos lugares. Máximo nivel. Fecha de apertura confirmada: <strong className="text-champagne">1 de agosto de 2026</strong>.
+            <p className="font-inter text-ivory/60 text-lg max-w-xl leading-relaxed mb-6">
+              Para familias que no aceptan términos medios. Un hogar boutique de cuidado premium para adultos mayores — íntimo, discreto y absolutamente personalizado.
             </p>
+            <div className="border border-champagne/20 rounded-2xl px-6 py-4 mb-10 max-w-xl">
+              <p className="font-inter text-champagne text-sm font-medium mb-1">📍 Apertura confirmada: 1 de agosto de 2026</p>
+              <p className="font-inter text-ivory/50 text-sm leading-relaxed">
+                Estamos en proceso de habilitación formal bajo la normativa uruguaya de residencias geriátricas. La sede estará disponible al momento de apertura. Hoy, la única prueba de quiénes somos es <strong className="text-ivory/80">Residencial Iporá en Tacuarembó</strong> — más de 4 años operando con excelencia.
+              </p>
+            </div>
 
             {/* Countdown */}
             <div className="grid grid-cols-4 gap-4 max-w-lg mb-10">
@@ -153,14 +159,17 @@ export default function Rivera() {
               Cuando el cuidado<br />se convierte en<br /><em className="text-champagne italic">experiencia</em>
             </h2>
             <p className="font-inter text-ivory/60 leading-relaxed mb-5">
-              Residencial Iporá Boutique es un proyecto nacido de la visión de Sonia y Nicolás: llevar el modelo íntimo y de calidad de Iporá a un nivel superior. Un hogar para pocos, donde cada detalle importa y cada residente recibe atención que va más allá del cuidado convencional.
+              Sabemos lo que significa confiar el cuidado de un ser querido a manos ajenas. Por eso, Residencial Iporá Boutique no es solo un servicio — es una promesa. Nacido de más de 4 años operando Residencial Iporá en Tacuarembó, este proyecto lleva ese modelo íntimo y humano a un nivel absolutamente superior.
             </p>
             <p className="font-inter text-ivory/60 leading-relaxed mb-5">
-              Con sedes en Rivera y Punta del Este, Uruguay — <em className="text-ivory/80">direcciones exactas a confirmar</em> — este proyecto boutique está diseñado para adultos mayores y sus familias que valoran la privacidad, la exclusividad y el más alto nivel de atención personalizada.
+              Estamos ultimando los detalles de habilitación formal en Rivera y Punta del Este, Uruguay, bajo la normativa vigente del Ministerio de Salud Pública. <em className="text-ivory/80">Por esta razón, la dirección exacta se confirma a quienes formalizan su pre-reserva.</em> No mostramos la casa antes de tiempo — la mostramos cuando está lista para recibir a quienes la merecen.
+            </p>
+            <p className="font-inter text-ivory/60 leading-relaxed mb-6">
+              Si su familia no tiene tiempo para lidiar con sistemas que no funcionan, si valoran la discreción, y si su ser querido merece lo mejor — este lugar es para ustedes.
             </p>
             <div className="border border-champagne/20 rounded-xl p-5 inline-block">
               <p className="font-inter text-champagne text-sm font-medium">Inversión desde USD 4.000 / mes</p>
-              <p className="font-inter text-ivory/40 text-xs mt-1">Precio exacto disponible bajo consulta privada</p>
+              <p className="font-inter text-ivory/40 text-xs mt-1">Precio exacto disponible bajo consulta privada · Apertura 1 ago 2026</p>
             </div>
           </RevealSection>
 
@@ -227,6 +236,41 @@ export default function Rivera() {
         </div>
       </section>
 
+      {/* Credibility anchor */}
+      <section className="py-16 border-t border-champagne/10">
+        <div className="max-w-4xl mx-auto px-5 md:px-10">
+          <RevealSection>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+              <div>
+                <span className="font-inter text-xs text-champagne uppercase tracking-widest block mb-4">Nuestra garantía</span>
+                <h2 className="font-cormorant text-4xl text-ivory font-light leading-tight mb-5">
+                  No vendemos sueños.<br /><em className="text-champagne italic">Vendemos resultados probados.</em>
+                </h2>
+                <p className="font-inter text-ivory/60 text-sm leading-relaxed mb-4">
+                  Residencial Iporá en Tacuarembó lleva más de 4 años funcionando con familias que renovaron su confianza mes a mes. Ese es nuestro único currículum — y es suficiente.
+                </p>
+                <p className="font-inter text-ivory/60 text-sm leading-relaxed">
+                  Iporá Boutique es la evolución natural de ese modelo: más exclusivo, más premium, en una ubicación nueva. Pero con los mismos valores, las mismas personas y el mismo compromiso inquebrantable.
+                </p>
+              </div>
+              <div className="space-y-4">
+                {[
+                  { number: '4+', label: 'Años de operación continua en Tacuarembó' },
+                  { number: '100%', label: 'Familias que eligieron renovar mes a mes' },
+                  { number: '01/08', label: 'Fecha de apertura confirmada — 2026' },
+                  { number: 'Limitado', label: 'Cupos disponibles por boutique — sin excepciones' },
+                ].map((stat) => (
+                  <div key={stat.label} className="flex items-center gap-4 border border-champagne/15 rounded-xl px-5 py-4">
+                    <span className="font-cormorant text-2xl text-champagne font-light w-24 flex-shrink-0">{stat.number}</span>
+                    <span className="font-inter text-ivory/60 text-sm">{stat.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
       {/* Pre-reserve CTA */}
       <section className="py-20">
         <div className="max-w-3xl mx-auto px-5 md:px-10">
@@ -238,13 +282,16 @@ export default function Rivera() {
               <div className="relative z-10">
                 <Diamond className="w-10 h-10 text-champagne mx-auto mb-5" />
                 <h2 className="font-cormorant text-4xl md:text-5xl text-ivory font-light mb-4">
-                  Asegurar tu lugar
+                  Los lugares se están reservando ahora
                 </h2>
                 <p className="font-inter text-ivory/60 mb-4 max-w-xl mx-auto">
-                  Los lugares en Residencial Boutique Rivera son limitados. Para asegurar el suyo, contáctenos por WhatsApp y coordinamos el proceso de pre-reserva con el <strong className="text-champagne">50% de seña inicial</strong>.
+                  Residencial Iporá Boutique abre el <strong className="text-champagne">1 de agosto de 2026</strong>. Los cupos son estrictamente limitados por diseño — no por capacidad, sino por filosofía. Cada residente merece atención real, no masificada.
                 </p>
-                <p className="font-inter text-ivory/40 text-sm mb-8">
-                  El precio exacto mensual se revela en consulta privada. Inversión estimada: desde USD 4.000/mes.
+                <p className="font-inter text-ivory/70 text-sm mb-3 max-w-lg mx-auto">
+                  Quienes pre-reservan hoy aseguran su lugar con el <strong className="text-champagne">50% de seña</strong> y reciben la dirección exacta, el detalle completo del servicio y una conversación privada con Nicolás.
+                </p>
+                <p className="font-inter text-ivory/40 text-sm mb-8 max-w-lg mx-auto">
+                  No hay un catálogo público. No hay visitas antes de la habilitación formal. Hay una conversación honesta, privada y sin presiones — para familias que saben lo que buscan.
                 </p>
 
                 <div className="flex justify-center mb-6">
@@ -277,9 +324,9 @@ export default function Rivera() {
           </RevealSection>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { icon: Star, title: 'Experiencia probada', text: '4+ años operando Residencial Iporá con éxito. Sabemos lo que hacemos.' },
-              { icon: Shield, title: 'Privacidad total', text: 'Pocos residentes. Nunca un ambiente de institución. Siempre un hogar.' },
-              { icon: Heart, title: 'Atención sin igual', text: 'Dos cuidadores de turno de día. Ratio de atención incomparable en Uruguay.' },
+              { icon: Star, title: 'Trayectoria real', text: 'Más de 4 años operando Residencial Iporá en Tacuarembó. No somos una promesa — somos un modelo que ya funciona.' },
+              { icon: Shield, title: 'Para familias ocupadas', text: 'Sin burocracia, sin sistemas que fallen. Una llamada con Nicolás y todo queda resuelto. Para quienes no tienen tiempo que perder.' },
+              { icon: Heart, title: 'Lo mejor o nada', text: 'Ratio de atención incomparable. Médico, nutricionista y trabajador social incluidos. Su familiar en las mejores manos de Uruguay.' },
             ].map((item, i) => (
               <RevealSection key={item.title} delay={i * 100}>
                 <div className="border border-champagne/15 rounded-2xl p-7 text-center hover:border-champagne/40 transition-colors">
