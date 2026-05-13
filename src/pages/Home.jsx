@@ -166,7 +166,6 @@ export default function Home() {
               { url: 'https://media.base44.com/images/public/6a050510a0e721e56d922807/9ffb326cd_WhatsAppImage2026-05-13at2039091.jpg', alt: 'Galería y patio exterior con plantas en Residencial Iporá' },
               { url: 'https://media.base44.com/images/public/6a050510a0e721e56d922807/2400dd1d8_WhatsAppImage2026-05-13at2039082.jpg', alt: 'Vista del jardín con árboles nativos, Residencial Iporá' },
               { url: 'https://media.base44.com/images/public/6a050510a0e721e56d922807/6f059361f_WhatsAppImage2026-05-13at203909.jpg', alt: 'Entrada principal de Residencial Iporá con horarios de visita' },
-              { url: 'https://media.base44.com/images/public/6a050510a0e721e56d922807/1657e7b96_WhatsAppImage2026-05-13at2011171.jpg', alt: 'Residentes compartiendo una comida en el comedor de Residencial Iporá, vida simple y familiar' },
             ].map((photo, i) => (
               <RevealSection key={i} delay={i * 80} className={photo.large ? 'md:col-span-2 md:row-span-1' : ''}>
                 <div className={`overflow-hidden rounded-2xl group ${photo.large ? 'h-64 md:h-80' : 'h-52 md:h-64'}`}>
@@ -179,6 +178,33 @@ export default function Home() {
               </RevealSection>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* SIMPLE LIFE SECTION */}
+      <section className="py-20 bg-sanctuary">
+        <div className="max-w-7xl mx-auto px-5 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <RevealSection>
+            <div className="overflow-hidden rounded-3xl">
+              <img
+                src="https://media.base44.com/images/public/6a050510a0e721e56d922807/1657e7b96_WhatsAppImage2026-05-13at2011171.jpg"
+                alt="Residentes compartiendo una comida en el comedor de Residencial Iporá"
+                className="w-full h-96 object-cover"
+              />
+            </div>
+          </RevealSection>
+          <RevealSection delay={150}>
+            <span className="font-inter text-sm text-trust-blue uppercase tracking-widest block mb-4">La vida aquí</span>
+            <h2 className="font-cormorant text-4xl md:text-5xl text-navy font-light leading-tight mb-5">
+              Una vida simple,<br /><em className="italic">con todo lo que importa</em>
+            </h2>
+            <p className="font-inter text-slate-mist leading-relaxed mb-4">
+              En Residencial Iporá los días transcurren con calma. Comidas compartidas, conversaciones tranquilas y el calor de un hogar de verdad. Sin apuros, sin soledad.
+            </p>
+            <p className="font-inter text-slate-mist leading-relaxed">
+              Cada residente encuentra aquí la calidez de una familia y la tranquilidad que merece en esta etapa de la vida.
+            </p>
+          </RevealSection>
         </div>
       </section>
 
