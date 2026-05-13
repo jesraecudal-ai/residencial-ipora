@@ -279,10 +279,10 @@ export default function Home() {
           <RevealSection>
             <span className="font-inter text-xs text-champagne uppercase tracking-widest block mb-4">Próximamente · Agosto 2026</span>
             <h2 className="font-cormorant text-4xl md:text-6xl text-ivory font-light leading-tight mb-5">
-              Residencial Boutique<br /><em className="text-champagne italic">Rivera</em>
+              Residencial<br /><em className="text-champagne italic">Iporá Boutique</em>
             </h2>
             <p className="font-inter text-ivory/60 mb-8 leading-relaxed">
-              Una experiencia de cuidado absolutamente exclusiva. Pocos lugares disponibles. Reserva tu espacio con una seña del 50% y asegura el mejor cuidado premium para tu ser querido.
+              Una experiencia de cuidado absolutamente exclusiva en Rivera y Punta del Este, Uruguay. Pocos lugares disponibles. Reserva tu espacio con una seña del 50% y asegura el mejor cuidado premium para tu ser querido.
             </p>
             <Link
               to="/rivera"

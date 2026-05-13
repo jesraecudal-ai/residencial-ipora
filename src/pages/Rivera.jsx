@@ -103,13 +103,12 @@ export default function Rivera() {
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 mb-8">
               <div className="w-2 h-2 rounded-full bg-champagne animate-pulse" />
-              <span className="font-inter text-champagne text-xs uppercase tracking-widest">Proyecto exclusivo · Rivera, Uruguay · 2026</span>
+              <span className="font-inter text-champagne text-xs uppercase tracking-widest">Proyecto exclusivo · Rivera & Punta del Este, Uruguay · 2026</span>
             </div>
 
             <h1 className="font-cormorant text-6xl md:text-8xl text-ivory font-light leading-none mb-6">
               Residencial<br />
-              <em className="text-champagne italic">Boutique</em><br />
-              Rivera
+              <em className="text-champagne italic">Iporá Boutique</em>
             </h1>
 
             <p className="font-inter text-ivory/60 text-lg max-w-xl leading-relaxed mb-10">
@@ -154,10 +153,10 @@ export default function Rivera() {
               Cuando el cuidado<br />se convierte en<br /><em className="text-champagne italic">experiencia</em>
             </h2>
             <p className="font-inter text-ivory/60 leading-relaxed mb-5">
-              Residencial Boutique Rivera es un proyecto nacido de la visión de Sonia y Nicolás: llevar el modelo íntimo y de calidad de Iporá a un nivel superior. Un hogar para pocos, donde cada detalle importa y cada residente recibe atención que va más allá del cuidado convencional.
+              Residencial Iporá Boutique es un proyecto nacido de la visión de Sonia y Nicolás: llevar el modelo íntimo y de calidad de Iporá a un nivel superior. Un hogar para pocos, donde cada detalle importa y cada residente recibe atención que va más allá del cuidado convencional.
             </p>
             <p className="font-inter text-ivory/60 leading-relaxed mb-5">
-              Ubicado en Rivera, Uruguay — <em className="text-ivory/80">dirección exacta a confirmar</em> — este proyecto boutique está diseñado para adultos mayores y sus familias que valoran la privacidad, la exclusividad y el más alto nivel de atención personalizada.
+              Con sedes en Rivera y Punta del Este, Uruguay — <em className="text-ivory/80">direcciones exactas a confirmar</em> — este proyecto boutique está diseñado para adultos mayores y sus familias que valoran la privacidad, la exclusividad y el más alto nivel de atención personalizada.
             </p>
             <div className="border border-champagne/20 rounded-xl p-5 inline-block">
               <p className="font-inter text-champagne text-sm font-medium">Inversión desde USD 4.000 / mes</p>
@@ -175,7 +174,7 @@ export default function Rivera() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-obsidian/80 to-transparent flex items-end p-8">
                   <div>
-                    <p className="font-cormorant text-2xl text-ivory">Rivera, Uruguay</p>
+                    <p className="font-cormorant text-2xl text-ivory">Rivera & Punta del Este, Uruguay</p>
                     <p className="font-inter text-champagne/80 text-sm">Apertura: 1 de agosto de 2026</p>
                   </div>
                 </div>
@@ -281,7 +280,7 @@ export default function Rivera() {
         <div className="max-w-5xl mx-auto px-5 md:px-10">
           <RevealSection>
             <div className="text-center mb-12">
-              <h2 className="font-cormorant text-4xl text-ivory font-light">¿Por qué elegir Rivera Boutique?</h2>
+              <h2 className="font-cormorant text-4xl text-ivory font-light">¿Por qué elegir Residencial Iporá Boutique?</h2>
             </div>
           </RevealSection>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -307,7 +306,7 @@ export default function Rivera() {
       {/* Footer mini */}
       <section className="py-10 border-t border-ivory/10 text-center">
         <p className="font-inter text-ivory/30 text-sm mb-3">
-          © {new Date().getFullYear()} Residencial Iporá · Proyecto Rivera Boutique
+          © {new Date().getFullYear()} Residencial Iporá · Residencial Iporá Boutique
         </p>
         <Link to="/" className="font-inter text-trust-blue text-sm hover:underline">
           ← Volver al sitio principal
