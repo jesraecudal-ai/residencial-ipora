@@ -166,6 +166,7 @@ export default function Home() {
               { url: 'https://media.base44.com/images/public/6a050510a0e721e56d922807/9ffb326cd_WhatsAppImage2026-05-13at2039091.jpg', alt: 'Galería y patio exterior con plantas en Residencial Iporá' },
               { url: 'https://media.base44.com/images/public/6a050510a0e721e56d922807/2400dd1d8_WhatsAppImage2026-05-13at2039082.jpg', alt: 'Vista del jardín con árboles nativos, Residencial Iporá' },
               { url: 'https://media.base44.com/images/public/6a050510a0e721e56d922807/6f059361f_WhatsAppImage2026-05-13at203909.jpg', alt: 'Entrada principal de Residencial Iporá con horarios de visita' },
+              { url: 'https://media.base44.com/images/public/6a050510a0e721e56d922807/1657e7b96_WhatsAppImage2026-05-13at2011171.jpg', alt: 'Residentes compartiendo una comida en el comedor de Residencial Iporá, vida simple y familiar' },
             ].map((photo, i) => (
               <RevealSection key={i} delay={i * 80} className={photo.large ? 'md:col-span-2 md:row-span-1' : ''}>
                 <div className={`overflow-hidden rounded-2xl group ${photo.large ? 'h-64 md:h-80' : 'h-52 md:h-64'}`}>
