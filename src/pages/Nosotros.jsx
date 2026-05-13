@@ -99,7 +99,7 @@ export default function Nosotros() {
                   <img
                     src="https://media.base44.com/images/public/6a050510a0e721e56d922807/348437edc_WhatsAppImage2026-05-13at203346.jpeg"
                     alt="Nicolás Macedo, co-fundador de Residencial Iporá"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
                 <div className="absolute -bottom-5 -left-5 bg-white rounded-2xl px-6 py-4 shadow-xl border border-slate-100">
