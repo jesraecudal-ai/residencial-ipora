@@ -97,8 +97,8 @@ export default function Nosotros() {
               <div className="relative">
                 <div className="bg-navy/5 rounded-3xl overflow-hidden aspect-[4/3]">
                   <img
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80"
-                    alt="Nicolás Macedo, co-fundador de Residencial Iporá, comprometido con el cuidado"
+                    src="https://media.base44.com/images/public/6a050510a0e721e56d922807/348437edc_WhatsAppImage2026-05-13at203346.jpeg"
+                    alt="Nicolás Macedo, co-fundador de Residencial Iporá"
                     className="w-full h-full object-cover"
                   />
                 </div>
