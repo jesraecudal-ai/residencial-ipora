@@ -115,9 +115,9 @@ export default function Rivera() {
               Para familias que no aceptan términos medios. Un hogar boutique de cuidado premium para adultos mayores — íntimo, discreto y absolutamente personalizado.
             </p>
             <div className="border border-champagne/20 rounded-2xl px-6 py-4 mb-10 max-w-xl">
-              <p className="font-inter text-champagne text-sm font-medium mb-1">📍 Apertura confirmada: 1 de agosto de 2026</p>
+              <p className="font-inter text-champagne text-sm font-medium mb-1">Apertura confirmada: 1 de agosto de 2026</p>
               <p className="font-inter text-ivory/50 text-sm leading-relaxed">
-                Estamos en proceso de habilitación formal bajo la normativa uruguaya de residencias geriátricas. La sede estará disponible al momento de apertura. Hoy, la única prueba de quiénes somos es <strong className="text-ivory/80">Residencial Iporá en Tacuarembó</strong> — más de 4 años operando con excelencia.
+                Este proyecto está en etapa de capitalización. No hay sede física aún — la habrá el día que abrimos. Nuestra única credencial es lo que ya existe: <strong className="text-ivory/80">Residencial Iporá en Tacuarembó</strong>, funcionando con excelencia hace más de 4 años.
               </p>
             </div>
 
@@ -159,13 +159,13 @@ export default function Rivera() {
               Cuando el cuidado<br />se convierte en<br /><em className="text-champagne italic">experiencia</em>
             </h2>
             <p className="font-inter text-ivory/60 leading-relaxed mb-5">
-              Sabemos lo que significa confiar el cuidado de un ser querido a manos ajenas. Por eso, Residencial Iporá Boutique no es solo un servicio — es una promesa. Nacido de más de 4 años operando Residencial Iporá en Tacuarembó, este proyecto lleva ese modelo íntimo y humano a un nivel absolutamente superior.
+              Residencial Iporá Boutique es una visión en construcción. No tenemos sede todavía — estamos capitalizando el proyecto para abrir el <strong className="text-ivory/80">1 de agosto de 2026</strong> en Uruguay. Lo que sí tenemos es algo que muy pocos pueden mostrar: un modelo que ya funciona.
             </p>
             <p className="font-inter text-ivory/60 leading-relaxed mb-5">
-              Estamos ultimando los detalles de habilitación formal en Rivera y Punta del Este, Uruguay, bajo la normativa vigente del Ministerio de Salud Pública. <em className="text-ivory/80">Por esta razón, la dirección exacta se confirma a quienes formalizan su pre-reserva.</em> No mostramos la casa antes de tiempo — la mostramos cuando está lista para recibir a quienes la merecen.
+              Residencial Iporá en Tacuarembó lleva más de 4 años cuidando adultos mayores con un nivel de atención que no existe en el mercado convencional. Ese es nuestro respaldo. No prometemos lo que no tenemos — mostramos lo que somos.
             </p>
             <p className="font-inter text-ivory/60 leading-relaxed mb-6">
-              Si su familia no tiene tiempo para lidiar con sistemas que no funcionan, si valoran la discreción, y si su ser querido merece lo mejor — este lugar es para ustedes.
+              Quienes pre-reservan hoy lo hacen porque confían en las personas detrás del proyecto, en la trayectoria de Iporá, y en su propia capacidad de reconocer una oportunidad real. No hay fotos de la sede. No hay dirección todavía. Hay una conversación honesta con Nicolás — y eso es suficiente para quienes entienden cómo funciona esto.
             </p>
             <div className="border border-champagne/20 rounded-xl p-5 inline-block">
               <p className="font-inter text-champagne text-sm font-medium">Inversión desde USD 4.000 / mes</p>
@@ -247,10 +247,10 @@ export default function Rivera() {
                   No vendemos sueños.<br /><em className="text-champagne italic">Vendemos resultados probados.</em>
                 </h2>
                 <p className="font-inter text-ivory/60 text-sm leading-relaxed mb-4">
-                  Residencial Iporá en Tacuarembó lleva más de 4 años funcionando con familias que renovaron su confianza mes a mes. Ese es nuestro único currículum — y es suficiente.
+                  Residencial Iporá en Tacuarembó lleva más de 4 años funcionando. Familias que eligieron confiar y siguieron confiando. Eso no se inventa. Es el único currículum que importa.
                 </p>
                 <p className="font-inter text-ivory/60 text-sm leading-relaxed">
-                  Iporá Boutique es la evolución natural de ese modelo: más exclusivo, más premium, en una ubicación nueva. Pero con los mismos valores, las mismas personas y el mismo compromiso inquebrantable.
+                  Iporá Boutique no existe físicamente todavía — existe en los planes, en la fecha y en la voluntad de quienes lo construyen. Si espera certezas antes de tiempo, este proyecto no es para usted. Si valora la visión y la trayectoria, bienvenido.
                 </p>
               </div>
               <div className="space-y-4">
@@ -288,10 +288,10 @@ export default function Rivera() {
                   Residencial Iporá Boutique abre el <strong className="text-champagne">1 de agosto de 2026</strong>. Los cupos son estrictamente limitados por diseño — no por capacidad, sino por filosofía. Cada residente merece atención real, no masificada.
                 </p>
                 <p className="font-inter text-ivory/70 text-sm mb-3 max-w-lg mx-auto">
-                  Quienes pre-reservan hoy aseguran su lugar con el <strong className="text-champagne">50% de seña</strong> y reciben la dirección exacta, el detalle completo del servicio y una conversación privada con Nicolás.
+                  Pre-reservar hoy significa asegurar su lugar con el <strong className="text-champagne">50% de seña</strong> y entrar en conversación directa y privada con Nicolás sobre el proyecto, el servicio y los próximos pasos.
                 </p>
                 <p className="font-inter text-ivory/40 text-sm mb-8 max-w-lg mx-auto">
-                  No hay un catálogo público. No hay visitas antes de la habilitación formal. Hay una conversación honesta, privada y sin presiones — para familias que saben lo que buscan.
+                  No hay sede que mostrar aún. No hay fotos del lugar. Hay una trayectoria real, una fecha comprometida, y dos personas que llevan años demostrando que pueden hacerlo — en Tacuarembó.
                 </p>
 
                 <div className="flex justify-center mb-6">
