@@ -166,19 +166,26 @@ export default function Nosotros() {
             <p className="font-inter text-slate-mist leading-relaxed mb-8">
               Estamos ubicados en Calle 9 y 18, Balneario Iporá, Tacuarembó — un rincón privilegiado de Uruguay, junto al parque natural protegido. El aire limpio, los árboles y el silencio de la naturaleza son parte integral de nuestra terapia.
             </p>
-            <div className="rounded-3xl overflow-hidden h-72 relative group">
-              <img
-                src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1400&q=80"
-                alt="Entorno natural de Balneario Iporá, Uruguay, cerca del parque protegido"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            <div className="rounded-3xl overflow-hidden h-96">
+              <iframe
+                src="https://maps.google.com/maps?q=Calle+9+y+18,+Balneario+Iporá,+Tacuarembó,+Uruguay&output=embed&z=15"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Ubicación Residencial Iporá"
               />
-              <div className="absolute inset-0 bg-navy/30 flex items-center justify-center">
-                <div className="bg-white/90 rounded-2xl px-8 py-4 text-center">
-                  <p className="font-cormorant text-2xl text-navy">Balneario Iporá</p>
-                  <p className="font-inter text-sm text-slate-mist">Tacuarembó, Uruguay</p>
-                </div>
-              </div>
             </div>
+            <a
+              href="https://maps.app.goo.gl/R7TqxSC4L49tibKe8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-4 font-inter text-sm text-trust-blue hover:underline"
+            >
+              Ver en Google Maps →
+            </a>
           </RevealSection>
         </div>
       </section>
