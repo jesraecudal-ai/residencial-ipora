@@ -84,7 +84,7 @@ export default function Rivera() {
           rel="noopener noreferrer"
           className="cta-btn cta-btn-gold px-5 py-2 rounded-full font-inter font-medium text-obsidian bg-champagne hover:brightness-110 transition-all text-sm"
         >
-          Pre-reservar
+          Hablar con Nicolás — Co-Fundador
         </a>
       </nav>
 
@@ -139,7 +139,7 @@ export default function Rivera() {
               rel="noopener noreferrer"
               className="cta-btn cta-btn-gold inline-flex items-center gap-2 px-8 py-4 rounded-full font-inter font-medium text-obsidian bg-champagne hover:brightness-110 transition-all"
             >
-              Solicitar información y pre-reservar <ArrowRight className="w-4 h-4" />
+              Hablar con Nicolás — Co-Fundador <ArrowRight className="w-4 h-4" />
             </a>
           </div>
         </div>
