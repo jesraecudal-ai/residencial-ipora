@@ -167,9 +167,24 @@ export default function Rivera() {
             <p className="font-inter text-ivory/60 leading-relaxed mb-6">
               Quienes pre-reservan hoy lo hacen porque confían en las personas detrás del proyecto, en la trayectoria de Iporá, y en su propia capacidad de reconocer una oportunidad real. No hay fotos de la sede. No hay dirección todavía. Hay una conversación honesta con Nicolás — y eso es suficiente para quienes entienden cómo funciona esto.
             </p>
-            <div className="border border-champagne/20 rounded-xl p-5 inline-block">
-              <p className="font-inter text-champagne text-sm font-medium">Inversión desde USD 4.000 / mes</p>
-              <p className="font-inter text-ivory/40 text-xs mt-1">Precio exacto disponible bajo consulta privada · Apertura 1 ago 2026</p>
+            {/* Price anchor */}
+            <div className="border border-champagne/20 rounded-2xl p-6 max-w-md">
+              <p className="font-inter text-ivory/40 text-xs uppercase tracking-widest mb-3">Lo que cuesta el cuidado real hoy</p>
+              <div className="space-y-2 mb-4">
+                <div className="flex justify-between items-center py-1.5 border-b border-ivory/5">
+                  <span className="font-inter text-ivory/40 text-sm line-through">Nursing home en Europa</span>
+                  <span className="font-inter text-ivory/40 text-sm line-through">USD 8.000–15.000/mes</span>
+                </div>
+                <div className="flex justify-between items-center py-1.5 border-b border-ivory/5">
+                  <span className="font-inter text-ivory/40 text-sm line-through">Cuidador 24h en casa (Uruguay)</span>
+                  <span className="font-inter text-ivory/40 text-sm line-through">USD 3.500–5.000/mes</span>
+                </div>
+                <div className="flex justify-between items-center py-2 rounded-lg bg-champagne/10 px-3 mt-2">
+                  <span className="font-inter text-champagne text-sm font-medium">Iporá Boutique — todo incluido</span>
+                  <span className="font-inter text-champagne text-sm font-semibold">desde USD 4.000/mes</span>
+                </div>
+              </div>
+              <p className="font-inter text-ivory/40 text-xs">Precio exacto bajo consulta privada · Apertura 1 ago 2026</p>
             </div>
           </RevealSection>
 
@@ -309,6 +324,73 @@ export default function Rivera() {
                   Al enviar un mensaje por WhatsApp, no adquirís ningún compromiso automático. Te contactaremos para hablar con privacidad y sin presiones.
                 </p>
               </div>
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* Price Anchoring Comparison Table */}
+      <section className="py-20 border-t border-champagne/10">
+        <div className="max-w-5xl mx-auto px-5 md:px-10">
+          <RevealSection>
+            <div className="text-center mb-12">
+              <span className="font-inter text-xs text-champagne uppercase tracking-widest block mb-4">Comparativa de valor</span>
+              <h2 className="font-cormorant text-4xl md:text-5xl text-ivory font-light">¿Cuánto cuesta realmente el cuidado?</h2>
+              <p className="font-inter text-ivory/40 text-sm mt-3 max-w-xl mx-auto">Antes de decidir, es importante entender lo que el mercado cobra — y lo que cada opción incluye.</p>
+            </div>
+          </RevealSection>
+
+          <RevealSection delay={100}>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr>
+                    <th className="font-inter text-ivory/40 text-xs uppercase tracking-wide pb-4 pr-4 w-1/3">Característica</th>
+                    <th className="font-inter text-ivory/30 text-xs uppercase tracking-wide pb-4 px-4 text-center">Cuidador en casa</th>
+                    <th className="font-inter text-ivory/30 text-xs uppercase tracking-wide pb-4 px-4 text-center">Geriátrico estándar</th>
+                    <th className="pb-4 px-4 text-center">
+                      <span className="font-inter text-champagne text-xs uppercase tracking-wide">✦ Iporá Boutique</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-ivory/5">
+                  {[
+                    { feature: 'Costo mensual (USD)', a: '3.500–5.000', b: '1.500–3.000*', c: 'desde 4.000' },
+                    { feature: 'Cuidado nocturno incluido', a: 'Extra', b: '✓', c: '✓' },
+                    { feature: 'Médico visitante semanal', a: '✗', b: 'Emergencias', c: '✓' },
+                    { feature: 'Nutricionista incluido', a: '✗', b: '✗', c: '✓' },
+                    { feature: 'Trabajador social', a: '✗', b: '✗', c: '✓' },
+                    { feature: 'Actividades personalizadas', a: '✗', b: 'Grupales', c: '✓ Individuales' },
+                    { feature: 'Atención 1 a 1', a: '✓', b: '✗ (1 a 8+)', c: '✓ ratio exclusivo' },
+                    { feature: 'Tranquilidad para la familia', a: 'Baja', b: 'Media', c: '✓ Máxima' },
+                  ].map((row, i) => (
+                    <tr key={i}>
+                      <td className="font-inter text-ivory/60 text-sm py-3 pr-4">{row.feature}</td>
+                      <td className="font-inter text-ivory/30 text-sm py-3 px-4 text-center">{row.a}</td>
+                      <td className="font-inter text-ivory/30 text-sm py-3 px-4 text-center">{row.b}</td>
+                      <td className="font-inter text-champagne text-sm py-3 px-4 text-center font-medium bg-champagne/5 rounded">{row.c}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <p className="font-inter text-ivory/20 text-xs mt-3">* Geriátrico estándar: costos básicos, sin contar extras frecuentes (pañales, medicamentos, atención médica adicional, traslados).</p>
+            </div>
+          </RevealSection>
+
+          <RevealSection delay={200}>
+            <div className="mt-10 border border-champagne/30 rounded-2xl p-6 bg-champagne/5 flex flex-col md:flex-row items-center justify-between gap-6">
+              <div>
+                <p className="font-cormorant text-2xl text-ivory font-light mb-1">La conclusión es simple:</p>
+                <p className="font-inter text-ivory/60 text-sm max-w-lg">Por un precio similar al de un cuidador informal — sin médico, sin nutricionista, sin estructura —, Iporá Boutique ofrece un equipo completo, un entorno seguro y la tranquilidad que su familia merece.</p>
+              </div>
+              <a
+                href="https://wa.me/59898282938?text=Hola%20Nicolás%2C%20quiero%20conocer%20el%20precio%20exacto%20de%20Iporá%20Boutique"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cta-btn cta-btn-gold flex-shrink-0 px-7 py-3 rounded-full font-inter font-medium text-obsidian bg-champagne hover:brightness-110 transition-all text-sm whitespace-nowrap"
+              >
+                Ver precio exacto →
+              </a>
             </div>
           </RevealSection>
         </div>
