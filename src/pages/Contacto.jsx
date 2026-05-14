@@ -158,8 +158,8 @@ Este mensaje fue enviado desde residencialipora.com
               {/* Map placeholder */}
               <div className="mt-10 rounded-2xl overflow-hidden h-56 relative">
                 <img
-                  src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80"
-                  alt="Entorno natural de Balneario Iporá, Tacuarembó"
+                  src="https://media.base44.com/images/public/6a050510a0e721e56d922807/eb050ba86_WhatsAppImage2026-05-13at203908.jpg"
+                  alt="Frente de Residencial Iporá con cartel y jardín en Balneario Iporá, Tacuarembó"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-navy/40 flex items-center justify-center">
