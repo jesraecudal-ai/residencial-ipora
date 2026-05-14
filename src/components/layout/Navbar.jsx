@@ -15,8 +15,6 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-  const isRivera = location.pathname === '/rivera';
-
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 30);
     window.addEventListener('scroll', handler);
@@ -26,8 +24,6 @@ export default function Navbar() {
   useEffect(() => {
     setMenuOpen(false);
   }, [location.pathname]);
-
-  if (isRivera) return null;
 
   return (
     <header
