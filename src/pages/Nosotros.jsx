@@ -57,8 +57,8 @@ export default function Nosotros() {
               <div className="relative">
                 <div className="bg-trust-blue/10 rounded-3xl overflow-hidden aspect-[4/3]">
                   <img
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
-                    alt="Sonia Sanguinet, fundadora de Residencial Iporá, sonriendo en entorno natural"
+                    src="https://media.base44.com/images/public/6a050510a0e721e56d922807/2dd2cf6c7_Screenshot2026-05-13at94936PM.png"
+                    alt="Sonia Sanguinet, fundadora de Residencial Iporá, en entorno natural"
                     className="w-full h-full object-cover"
                   />
                 </div>
