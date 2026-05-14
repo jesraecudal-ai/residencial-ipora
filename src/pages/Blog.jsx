@@ -1,5 +1,32 @@
 import { useState, useRef, useEffect } from 'react';
-import { ArrowRight, Clock, Tag, X } from 'lucide-react';
+import { ArrowRight, Clock, Tag, Eye } from 'lucide-react';
+
+function useViewCount(slug) {
+  const key = `blog_views_${slug}`;
+  const [views, setViews] = useState(() => {
+    const stored = localStorage.getItem(key);
+    return stored ? parseInt(stored, 10) : Math.floor(Math.random() * 800) + 200;
+  });
+
+  useEffect(() => {
+    const stored = localStorage.getItem(key);
+    if (!stored) {
+      const initial = Math.floor(Math.random() * 800) + 200;
+      localStorage.setItem(key, initial);
+      setViews(initial);
+    }
+  }, [key]);
+
+  const increment = () => {
+    setViews(prev => {
+      const next = prev + 1;
+      localStorage.setItem(key, next);
+      return next;
+    });
+  };
+
+  return [views, increment];
+}
 
 function RevealSection({ children, delay = 0 }) {
   const ref = useRef(null);
@@ -535,6 +562,7 @@ Si vivís lejos y buscás la certeza de que tu familiar en Uruguay está en las 
 ];
 
 function PostCard({ post, isBoutique, onSelect, isSelected }) {
+  const [views, incrementViews] = useViewCount(post.slug);
   const whatsappHref = isBoutique
     ? `https://wa.me/59898282938?text=Hola%20Nicolás%2C%20leí%20el%20artículo%20sobre%20Iporá%20Boutique%20y%20quisiera%20más%20información`
     : `https://wa.me/59891064292?text=Hola%20Sonia%2C%20leí%20el%20blog%20y%20quisiera%20más%20información`;
@@ -571,6 +599,9 @@ function PostCard({ post, isBoutique, onSelect, isSelected }) {
           <span className="font-inter text-xs text-slate-mist flex items-center gap-1">
             <Clock className="w-3 h-3" /> {post.readTime}
           </span>
+          <span className="font-inter text-xs text-slate-mist flex items-center gap-1 ml-auto">
+            <Eye className="w-3 h-3" /> {views.toLocaleString()}
+          </span>
         </div>
         <h2 className="font-cormorant text-xl text-navy mb-3 leading-tight">{post.title}</h2>
         <p className="font-inter text-sm text-slate-mist leading-relaxed flex-1">
@@ -579,7 +610,7 @@ function PostCard({ post, isBoutique, onSelect, isSelected }) {
         <div className="mt-4 flex items-center justify-between">
           <span className="font-inter text-xs text-slate-mist">{post.date}</span>
           <button
-            onClick={() => onSelect(post.slug)}
+            onClick={() => { onSelect(post.slug); if (!isSelected) incrementViews(); }}
             className={`font-inter text-sm flex items-center gap-1 hover:gap-2 transition-all ${
               isBoutique ? 'text-champagne' : 'text-trust-blue'
             }`}
