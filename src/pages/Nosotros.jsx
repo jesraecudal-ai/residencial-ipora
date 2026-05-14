@@ -133,6 +133,53 @@ export default function Nosotros() {
         </div>
       </section>
 
+      {/* Vision, Mision, Goal */}
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-5 md:px-10">
+          <RevealSection>
+            <div className="text-center mb-14">
+              <span className="font-inter text-sm text-trust-blue uppercase tracking-widest block mb-3">Nuestra identidad</span>
+              <h2 className="font-cormorant text-4xl md:text-5xl text-navy font-light">Visión, Misión y Objetivo</h2>
+            </div>
+          </RevealSection>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <RevealSection delay={0}>
+              <div className="text-center p-8 rounded-3xl border border-slate-100 hover-lift h-full">
+                <div className="w-14 h-14 rounded-full bg-trust-blue flex items-center justify-center mx-auto mb-5">
+                  <span className="font-cormorant text-2xl text-white font-light">V</span>
+                </div>
+                <h3 className="font-cormorant text-2xl text-navy mb-4">Visión</h3>
+                <p className="font-inter text-slate-mist text-sm leading-relaxed">
+                  Ser el hogar de referencia en Uruguay donde los adultos mayores vivan con plenitud, dignidad y amor — un lugar donde cada persona sea vista, escuchada y valorada hasta el último día.
+                </p>
+              </div>
+            </RevealSection>
+            <RevealSection delay={100}>
+              <div className="text-center p-8 rounded-3xl bg-navy h-full">
+                <div className="w-14 h-14 rounded-full bg-trust-blue/30 border border-trust-blue/50 flex items-center justify-center mx-auto mb-5">
+                  <span className="font-cormorant text-2xl text-ivory font-light">M</span>
+                </div>
+                <h3 className="font-cormorant text-2xl text-ivory mb-4">Misión</h3>
+                <p className="font-inter text-ivory/60 text-sm leading-relaxed">
+                  Brindar cuidado personalizado, continuo y compasivo a adultos mayores, en un entorno familiar y natural, garantizando el bienestar físico, emocional y social de cada residente y la tranquilidad de sus familias.
+                </p>
+              </div>
+            </RevealSection>
+            <RevealSection delay={200}>
+              <div className="text-center p-8 rounded-3xl border border-slate-100 hover-lift h-full">
+                <div className="w-14 h-14 rounded-full bg-champagne flex items-center justify-center mx-auto mb-5">
+                  <span className="font-cormorant text-2xl text-obsidian font-light">O</span>
+                </div>
+                <h3 className="font-cormorant text-2xl text-navy mb-4">Objetivo</h3>
+                <p className="font-inter text-slate-mist text-sm leading-relaxed">
+                  Expandir el modelo de Residencial Iporá para que más familias uruguayas accedan a un cuidado de calidad real — íntimo, humano y sin concesiones — tanto en Tacuarembó como en los nuevos proyectos boutique del país.
+                </p>
+              </div>
+            </RevealSection>
+          </div>
+        </div>
+      </section>
+
       {/* Values */}
       <section className="py-20 bg-navy">
         <div className="max-w-7xl mx-auto px-5 md:px-10">
