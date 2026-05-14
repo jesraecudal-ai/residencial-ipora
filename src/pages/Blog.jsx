@@ -656,7 +656,7 @@ function PostCard({ post, isBoutique, onSelect, isSelected }) {
 
 export default function Blog() {
   const [selected, setSelected] = useState(null);
-  const [tab, setTab] = useState('ipor a');
+  const [tab, setTab] = useState('ipora');
 
   const handleSelect = (slug) => setSelected(selected === slug ? null : slug);
 
