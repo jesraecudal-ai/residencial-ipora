@@ -48,6 +48,7 @@ export default function Footer() {
                 ['Cómo Funciona', '/como-funciona'],
                 ['Blog', '/blog'],
                 ['Rivera Boutique', '/rivera'],
+                ['Cuidado Mayor', '/cuidado-mayor'],
                 ['Contacto', '/contacto'],
               ].map(([label, path]) => (
                 <li key={path}>
