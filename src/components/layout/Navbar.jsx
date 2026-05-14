@@ -7,7 +7,7 @@ const navLinks = [
   { label: 'Nosotros', path: '/nosotros' },
   { label: 'Cómo Funciona', path: '/como-funciona' },
   { label: 'Blog', path: '/blog' },
-  { label: 'Rivera Boutique', path: '/rivera', special: true },
+  { label: 'Iporá Boutique', path: '/rivera', special: true },
   { label: 'Contacto', path: '/contacto' },
 ];
 
