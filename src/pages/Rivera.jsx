@@ -65,7 +65,7 @@ export default function Rivera() {
       <section className="relative min-h-screen flex items-center pt-24">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1560185007-cde436f6a4d?w=1800&q=80')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=1800&q=80')" }}
           aria-hidden="true"
         />
         <div className="absolute inset-0" style={{
