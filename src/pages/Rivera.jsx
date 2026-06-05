@@ -85,7 +85,7 @@ export default function Rivera() {
             </h1>
 
             <p className="font-inter text-ivory/60 text-lg max-w-xl leading-relaxed mb-6">
-              For families who accept no compromise. A boutique premium care home for older adults — intimate, discreet and absolutely personalized.
+              You love them deeply — but you are exhausted. Caring for an aging parent at home while holding a career, raising your own children, and managing your life is one of the hardest things a person can do. Iporá Boutique exists because your loved one deserves more than survival. They deserve to truly <em className="text-ivory/90">live</em>.
             </p>
             <div className="border border-champagne/20 rounded-2xl px-6 py-4 mb-10 max-w-xl">
               <p className="font-inter text-champagne text-sm font-medium mb-1">Confirmed opening: August 1, 2026</p>
@@ -127,22 +127,22 @@ export default function Rivera() {
       <section className="py-24 relative">
         <div className="max-w-7xl mx-auto px-5 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <RevealSection>
-            <span className="font-inter text-xs text-champagne uppercase tracking-widest block mb-5">The concept</span>
+            <span className="font-inter text-xs text-champagne uppercase tracking-widest block mb-5">The ultimate act of love</span>
             <h2 className="font-cormorant text-5xl text-ivory font-light leading-tight mb-6">
-              When care becomes<br />an <em className="text-champagne italic">experience</em>
+              Not a hospital.<br />A <em className="text-champagne italic">home</em>.
             </h2>
             <p className="font-inter text-ivory/60 leading-relaxed mb-5">
-              Residencial Iporá Boutique is a vision under construction. We have no location yet — we are capitalizing the project to open on <strong className="text-ivory/80">August 1, 2026</strong> in Uruguay. What we do have is something very few can show: a model that already works.
+              We know the guilt that keeps you up at night. The fear that Mom fell and no one was there. The exhaustion of being the only one who notices Dad is eating less. The weight of loving someone so much — and not being able to give them everything they need, no matter how hard you try.
             </p>
             <p className="font-inter text-ivory/60 leading-relaxed mb-5">
-              Residencial Iporá in Tacuarembó has been caring for older adults for over 4 years with a level of attention that simply does not exist in the conventional market. That is our track record. We don't promise what we don't have — we show what we are.
+              Iporá Boutique is not a nursing facility. It is not a hospital. It is a boutique home — intimate, warm, and thoughtfully designed — where your parent or grandparent spends their remaining years living fully. Supported in their day-to-day life. Known by name, known by story, known by heart.
             </p>
             <p className="font-inter text-ivory/60 leading-relaxed mb-6">
-              Those who pre-book today do so because they trust the people behind the project, the Iporá track record, and their own ability to recognize a real opportunity. There are no photos of the location yet. No address yet. There is an honest conversation with Nicolás — and that is enough for those who understand how this works.
+              Choosing Iporá Boutique for your loved one is not giving up. It is the highest form of care — giving them a life you genuinely could not provide alone. That takes courage. And love.
             </p>
             {/* Price anchor */}
             <div className="border border-champagne/20 rounded-2xl p-6 max-w-md">
-              <p className="font-inter text-ivory/40 text-xs uppercase tracking-widest mb-3">What quality care costs today</p>
+              <p className="font-inter text-ivory/40 text-xs uppercase tracking-widest mb-3">Pricing — transparent and tailored</p>
               <div className="space-y-2 mb-4">
                 <div className="flex justify-between items-center py-1.5 border-b border-ivory/5">
                   <span className="font-inter text-ivory/40 text-sm line-through">Nursing home in Europe</span>
@@ -153,11 +153,11 @@ export default function Rivera() {
                   <span className="font-inter text-ivory/40 text-sm line-through">USD 3,500–5,000/mo</span>
                 </div>
                 <div className="flex justify-between items-center py-2 rounded-lg bg-champagne/10 px-3 mt-2">
-                  <span className="font-inter text-champagne text-sm font-medium">Iporá Boutique — all inclusive</span>
-                  <span className="font-inter text-champagne text-sm font-semibold">from USD 4,000/mo</span>
+                  <span className="font-inter text-champagne text-sm font-medium">Iporá Boutique — starts from</span>
+                  <span className="font-inter text-champagne text-sm font-semibold">USD 4,500/mo</span>
                 </div>
               </div>
-              <p className="font-inter text-ivory/40 text-xs">Exact price upon private inquiry · Opening Aug 1, 2026</p>
+              <p className="font-inter text-ivory/40 text-xs">Every resident is unique. Pricing adjusts based on their level of dependency and care needs — tell us about your loved one and we will tailor a plan.</p>
             </div>
           </RevealSection>
 
@@ -178,7 +178,7 @@ export default function Rivera() {
               </div>
               <div className="absolute -top-4 -right-4 bg-champagne rounded-2xl px-5 py-3">
                 <p className="font-cormorant text-obsidian text-lg">Limited spots</p>
-                <p className="font-inter text-obsidian text-xs">Pre-book with 50% deposit</p>
+                <p className="font-inter text-obsidian text-xs">Opening August 1, 2026</p>
               </div>
             </div>
           </RevealSection>
@@ -190,10 +190,11 @@ export default function Rivera() {
         <div className="max-w-5xl mx-auto px-5 md:px-10">
           <RevealSection>
             <div className="text-center mb-14">
-              <span className="font-inter text-xs text-champagne uppercase tracking-widest block mb-4">Included services</span>
-              <h2 className="font-cormorant text-4xl md:text-5xl text-ivory font-light">
-                Everything included in your monthly fee
+              <span className="font-inter text-xs text-champagne uppercase tracking-widest block mb-4">What's included</span>
+              <h2 className="font-cormorant text-4xl md:text-5xl text-ivory font-light mb-3">
+                Everything your loved one needs to live fully
               </h2>
+              <p className="font-inter text-ivory/40 text-sm max-w-xl mx-auto">We are not a hospital. We are a home. Our team supports each resident's day-to-day life — their routines, their dignity, their joy — for as long as they are with us.</p>
             </div>
           </RevealSection>
 
@@ -259,7 +260,62 @@ export default function Rivera() {
         </div>
       </section>
 
-      {/* Pre-reserve CTA */}
+      {/* Healthcare plan requirement */}
+      <section className="py-16 border-t border-champagne/10" style={{ background: 'linear-gradient(135deg, #0a0a0a 0%, #0f1628 100%)' }}>
+        <div className="max-w-4xl mx-auto px-5 md:px-10">
+          <RevealSection>
+            <div className="text-center mb-10">
+              <span className="font-inter text-xs text-champagne uppercase tracking-widest block mb-4">Healthcare coverage</span>
+              <h2 className="font-cormorant text-4xl text-ivory font-light mb-4">Every resident chooses a healthcare plan</h2>
+              <p className="font-inter text-ivory/50 text-sm max-w-2xl mx-auto leading-relaxed">
+                We are a home, not a clinic — but we take health seriously. Upon joining Iporá Boutique, every resident is required to enroll in one of the mutualist or private healthcare plans we provide and support. We guide families through the options so the right coverage is in place from day one.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {[
+                { title: 'Mutualist plan', text: 'Uruguay\'s established mutual health system. We help you enroll and coordinate all visits and follow-ups.' },
+                { title: 'Private health insurance', text: 'Premium private coverage options with broader specialist access and faster response times.' },
+                { title: 'We guide you', text: 'Not sure what plan is right? Our team walks every family through available options before admission.' },
+              ].map((item, i) => (
+                <div key={i} className="border border-champagne/15 rounded-2xl p-6 hover:border-champagne/35 transition-colors">
+                  <h3 className="font-cormorant text-lg text-champagne mb-2">{item.title}</h3>
+                  <p className="font-inter text-ivory/50 text-sm leading-relaxed">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* Tiers section */}
+      <section className="py-20" style={{ background: 'linear-gradient(180deg, #0f1628 0%, #050505 100%)' }}>
+        <div className="max-w-4xl mx-auto px-5 md:px-10">
+          <RevealSection>
+            <div className="text-center mb-12">
+              <span className="font-inter text-xs text-champagne uppercase tracking-widest block mb-4">Care tiers</span>
+              <h2 className="font-cormorant text-4xl text-ivory font-light mb-3">Priced by need, not by room</h2>
+              <p className="font-inter text-ivory/50 text-sm max-w-xl mx-auto">No two residents are the same. Our pricing reflects the actual level of support your loved one requires — from companionship and supervision, to full daily care assistance.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {[
+                { tier: 'Tier 1', name: 'Independent Support', price: 'from USD 4,500/mo', desc: 'For elders who are largely independent but benefit from daily companionship, meals, and light supervision. Ideal for early stages.' },
+                { tier: 'Tier 2', name: 'Assisted Living', price: 'Customized pricing', desc: 'For residents who need help with daily activities — bathing, medication, mobility — while still enjoying active social participation.', featured: true },
+                { tier: 'Tier 3', name: 'Full Dependency Care', price: 'Customized pricing', desc: 'For residents requiring round-the-clock assistance, specialized nursing support, and intensive daily care management.' },
+              ].map((t, i) => (
+                <div key={i} className={`rounded-2xl p-7 ${t.featured ? 'border-2 border-champagne bg-champagne/5' : 'border border-champagne/20'}`}>
+                  <span className="font-inter text-xs text-champagne uppercase tracking-widest block mb-2">{t.tier}</span>
+                  <h3 className="font-cormorant text-xl text-ivory mb-2">{t.name}</h3>
+                  <p className="font-inter text-champagne text-sm font-medium mb-3">{t.price}</p>
+                  <p className="font-inter text-ivory/50 text-sm leading-relaxed">{t.desc}</p>
+                </div>
+              ))}
+            </div>
+            <p className="font-inter text-ivory/30 text-xs text-center mt-6">Exact pricing is determined after a private intake conversation about your loved one's specific needs and current health status.</p>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* Email CTA */}
       <section className="py-20">
         <div className="max-w-3xl mx-auto px-5 md:px-10">
           <RevealSection>
@@ -270,31 +326,37 @@ export default function Rivera() {
               <div className="relative z-10">
                 <Diamond className="w-10 h-10 text-champagne mx-auto mb-5" />
                 <h2 className="font-cormorant text-4xl md:text-5xl text-ivory font-light mb-4">
-                  Spots are being reserved now
+                  Tell us about your loved one
                 </h2>
                 <p className="font-inter text-ivory/60 mb-4 max-w-xl mx-auto">
-                  Residencial Iporá Boutique opens on <strong className="text-champagne">August 1, 2026</strong>. Spots are strictly limited by design — not by capacity, but by philosophy. Every resident deserves real attention, not a mass-market approach.
+                  Residencial Iporá Boutique opens on <strong className="text-champagne">August 1, 2026</strong>. Spots are strictly limited — not by capacity, but by our commitment to genuine, individual attention for every resident.
                 </p>
                 <p className="font-inter text-ivory/70 text-sm mb-3 max-w-lg mx-auto">
-                  Pre-booking today means securing your spot with a <strong className="text-champagne">50% deposit</strong> and entering a direct, private conversation with Nicolás about the project, the service, and next steps.
+                  To explore if Iporá Boutique is the right fit, send us an email and tell us about your parent or grandparent — their name, their personality, their needs, their story. We will reach out personally to discuss the care tier that suits them best and answer every question you have.
                 </p>
                 <p className="font-inter text-ivory/40 text-sm mb-8 max-w-lg mx-auto">
-                  There is no location to show yet. No photos of the place. There is a real track record, a committed date, and two people who have spent years proving they can do it — in Tacuarembó.
+                  No pressure. No commitment. Just an honest conversation about how we can best support your family.
                 </p>
 
-                <div className="flex justify-center mb-6">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                   <a
-                    href="https://wa.me/59898282938?text=Hello%20Nicol%C3%A1s%2C%20I%27m%20interested%20in%20pre-booking%20at%20Residencial%20Boutique%20Rivera.%20I%27d%20like%20to%20know%20the%20price%20and%20deposit%20process."
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="mailto:residencialipor@gmail.com?subject=Inquiry%20about%20Ipor%C3%A1%20Boutique&body=Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20Ipor%C3%A1%20Boutique%20for%20my%20loved%20one.%0A%0ATheir%20name%3A%0ATheir%20age%3A%0ATheir%20current%20needs%3A%0A%0APlease%20contact%20me%20at%3A"
                     className="cta-btn cta-btn-gold px-8 py-4 rounded-full font-inter font-medium text-obsidian bg-champagne hover:brightness-110 transition-all inline-flex items-center gap-2 justify-center"
                   >
-                    Talk to Nicolás — Co-Founder
+                    Send us an email →
+                  </a>
+                  <a
+                    href="https://wa.me/59898282938?text=Hello%20Nicol%C3%A1s%2C%20I%27m%20interested%20in%20Ipor%C3%A1%20Boutique%20for%20my%20loved%20one."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cta-btn px-8 py-4 rounded-full font-inter font-medium text-ivory border border-ivory/20 hover:bg-ivory/5 transition-all inline-flex items-center gap-2 justify-center text-sm"
+                  >
+                    Or WhatsApp Nicolás
                   </a>
                 </div>
 
                 <p className="font-inter text-ivory/30 text-xs">
-                  Sending a WhatsApp message does not create any automatic commitment. We will contact you privately and without pressure.
+                  Your inquiry is completely confidential. We respond personally to every message.
                 </p>
               </div>
             </div>
@@ -328,7 +390,7 @@ export default function Rivera() {
                 </thead>
                 <tbody className="divide-y divide-ivory/5">
                   {[
-                    { feature: 'Monthly cost (USD)', a: '3,500–5,000', b: '1,500–3,000*', c: 'from 4,000' },
+                    { feature: 'Monthly cost (USD)', a: '3,500–5,000', b: '1,500–3,000*', c: 'from 4,500' },
                     { feature: 'Overnight care included', a: 'Extra', b: '✓', c: '✓' },
                     { feature: 'Weekly visiting physician', a: '✗', b: 'Emergencies only', c: '✓' },
                     { feature: 'Nutritionist included', a: '✗', b: '✗', c: '✓' },
@@ -379,9 +441,9 @@ export default function Rivera() {
           </RevealSection>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { icon: Star, title: 'Real track record', text: 'Over 4 years operating Residencial Iporá in Tacuarembó. We are not a promise — we are a model that already works.' },
-              { icon: Shield, title: 'For busy families', text: 'No bureaucracy, no failing systems. One call with Nicolás and everything is sorted. For those who have no time to waste.' },
-              { icon: Heart, title: 'The best or nothing', text: 'Unmatched caregiver ratio. Doctor, nutritionist and social worker included. Your loved one in the best hands in Uruguay.' },
+              { icon: Heart, title: 'Because you love them', text: 'You have carried this weight long enough. Choosing Iporá Boutique is the greatest gift you can give your parent — a life fully lived, not merely managed.' },
+              { icon: Shield, title: 'A home, not a ward', text: "No hospital corridors. No institutional schedules. A boutique home where your loved one's remaining years are filled with warmth, dignity, and real human connection." },
+              { icon: Star, title: 'Proven, not promised', text: 'Over 4 years running Residencial Iporá in Tacuarembó. Families who trusted us — and still do. That is the only credential that matters.' },
             ].map((item, i) => (
               <RevealSection key={item.title} delay={i * 100}>
                 <div className="border border-champagne/15 rounded-2xl p-7 text-center hover:border-champagne/40 transition-colors">
