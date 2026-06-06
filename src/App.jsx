@@ -12,6 +12,7 @@ import ComoFunciona from './pages/ComoFunciona';
 import Blog from './pages/Blog';
 import Contacto from './pages/Contacto';
 import Rivera from './pages/Rivera';
+import RiveraES from './pages/RiveraES';
 import CuidadoMayor from './pages/CuidadoMayor';
 
 const AuthenticatedApp = () => {
@@ -46,6 +47,7 @@ const AuthenticatedApp = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/rivera" element={<Rivera />} />
+        <Route path="/rivera-es" element={<RiveraES />} />
         <Route path="/cuidado-mayor" element={<CuidadoMayor />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
