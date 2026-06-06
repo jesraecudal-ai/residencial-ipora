@@ -293,7 +293,7 @@ export default function Rivera() {
                 Choose the home. We provide the care.
               </h2>
               <p className="font-inter text-ivory/50 text-sm max-w-2xl mx-auto leading-relaxed">
-                Iporá Boutique operates through a curated network of residential homes and trusted partners across Uruguay. Families are not confined to a single building — they participate in selecting the residence that best reflects their loved one's preferences, lifestyle, and care needs.
+                Iporá Boutique operates through a curated network of residential homes and trusted partners across Uruguay. Our primary presence is in <span className="text-champagne font-medium">Colonia, Montevideo, and Maldonado</span> — where we have the strongest property partnerships and the most available homes. Families participate in selecting the residence that best reflects their loved one's preferences, lifestyle, and care needs.
               </p>
             </div>
           </RevealSection>
@@ -306,7 +306,7 @@ export default function Rivera() {
               { icon: Calendar, title: 'Schedule a visit', text: 'Arrange an in-person visit to any residence you are considering for your loved one.' },
               { icon: Heart, title: 'Discuss care needs', text: 'Meet with the Iporá team before admission to ensure we understand your loved one fully.' },
               { icon: Home, title: 'Participate in selection', text: 'Families are active participants in choosing the residence — not passive recipients of an assignment.' },
-              { icon: MapPin, title: 'Network across Uruguay', text: 'Through partnerships with real estate professionals, we can identify homes based on your preferred location and lifestyle.' }].
+              { icon: MapPin, title: 'Colonia · Montevideo · Maldonado', text: 'Our strongest network of property partners is concentrated in these three departments — where we can place your loved one most quickly and confidently.' }].
               map((item, i) =>
               <div key={i} className="flex gap-4 p-5 border border-champagne/15 rounded-xl hover:border-champagne/35 transition-colors">
                   <div className="w-9 h-9 rounded-lg bg-champagne/10 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -325,7 +325,7 @@ export default function Rivera() {
             <div className="border border-champagne/20 rounded-2xl p-7 bg-champagne/3">
               <p className="font-inter text-ivory/40 text-xs uppercase tracking-widest mb-3">A note on residence visits</p>
               <p className="font-inter text-ivory/60 text-sm leading-relaxed">
-                When visiting a residence, real estate representatives or property owners may be present — particularly if the home is vacant or newly available within our network. This is part of our concierge-style placement process: we work closely with real estate professionals across Uruguay to give families access to exceptional homes that could not be found through conventional channels. You are not viewing a generic care facility. You are previewing a curated residence, selected specifically because it meets the standards of the Iporá Boutique Care Network.
+                When visiting a residence, real estate representatives or property owners may be present — particularly if the home is vacant or newly available within our network. Our deepest partnerships are concentrated in <strong className="text-ivory/80">Colonia, Montevideo, and Maldonado</strong>, where we have the most established relationships with property owners and can offer families the widest range of homes. We also work with real estate professionals in other parts of Uruguay, though availability outside these regions may vary. You are not viewing a generic care facility — you are previewing a curated residence selected specifically because it meets the standards of the Iporá Boutique Care Network.
               </p>
             </div>
           </RevealSection>
