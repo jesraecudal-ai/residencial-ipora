@@ -653,7 +653,7 @@ export default function Rivera() {
           <RevealSection>
             <div className="relative rounded-3xl mb-12 overflow-hidden h-72 md:h-96">
               <div
-                className="absolute inset-0 bg-cover bg-center"
+                className="absolute inset-0 bg-cover bg-top"
                 style={{ backgroundImage: "url('https://media.base44.com/images/public/6a050510a0e721e56d922807/8fdbfca7e_image.png')" }}
               />
               <div className="absolute inset-0 bg-obsidian/30" />
