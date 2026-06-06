@@ -110,7 +110,7 @@ export default function Rivera() {
   return (
     <div className="bg-obsidian min-h-screen overflow-x-hidden">
       {/* Language switcher */}
-      <div className="fixed top-20 right-5 z-[60]">
+      <div className="fixed top-24 right-5 z-[60]">
         <Link
           to="/rivera-es"
           className="flex items-center gap-2 font-inter text-xs text-champagne border border-champagne/30 bg-obsidian/80 backdrop-blur-sm px-4 py-1.5 rounded-full hover:bg-champagne/10 transition-all"
