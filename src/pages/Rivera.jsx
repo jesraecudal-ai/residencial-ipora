@@ -485,10 +485,10 @@ export default function Rivera() {
       {/* Photo before Tiers */}
       <section className="relative py-24 overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-top"
           style={{ backgroundImage: "url('https://media.base44.com/images/public/6a050510a0e721e56d922807/4d36f9b7a_image.png')" }}
         />
-        <div className="absolute inset-0 bg-obsidian/60" />
+        <div className="absolute inset-0 bg-obsidian/30" />
         <div className="relative z-10 max-w-2xl mx-auto px-5 text-center">
           <p className="font-cormorant text-3xl md:text-4xl text-ivory font-light italic">
             "Every resident deserves warmth, dignity, and genuine human connection."
