@@ -483,14 +483,12 @@ export default function Rivera() {
       </section>
 
       {/* Photo before Tiers */}
-      <section className="py-0">
-        <div className="overflow-hidden h-72 md:h-96">
-          <img
-            src="https://media.base44.com/images/public/6a050510a0e721e56d922807/4d36f9b7a_image.png"
-            alt="Caregiver holding hands with elderly resident"
-            className="w-full h-full object-cover"
-          />
-        </div>
+      <section className="py-0 bg-obsidian">
+        <img
+          src="https://media.base44.com/images/public/6a050510a0e721e56d922807/4d36f9b7a_image.png"
+          alt="Caregiver holding hands with elderly resident"
+          className="w-full object-contain max-h-[600px]"
+        />
       </section>
 
       {/* Tiers section */}
@@ -648,11 +646,11 @@ export default function Rivera() {
             </div>
           </RevealSection>
           <RevealSection>
-            <div className="overflow-hidden rounded-3xl mb-12 h-64 md:h-80">
+            <div className="rounded-3xl mb-12 bg-obsidian overflow-hidden">
               <img
                 src="https://media.base44.com/images/public/6a050510a0e721e56d922807/8fdbfca7e_image.png"
                 alt="Caregiver walking with elderly resident in a garden"
-                className="w-full h-full object-cover opacity-90"
+                className="w-full object-contain max-h-[600px] opacity-90"
               />
             </div>
           </RevealSection>
