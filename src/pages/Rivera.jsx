@@ -639,9 +639,9 @@ export default function Rivera() {
           <RevealSection>
             <div className="overflow-hidden rounded-3xl mb-12 h-64 md:h-80">
               <img
-                src="https://images.unsplash.com/photo-1576765608866-5b51046452be?w=1400&q=80"
-                alt="Caregiver and elderly resident sharing a warm moment at home"
-                className="w-full h-full object-contain opacity-80"
+                src="https://media.base44.com/images/public/6a050510a0e721e56d922807/8fdbfca7e_image.png"
+                alt="Caregiver walking with elderly resident in a garden"
+                className="w-full h-full object-cover opacity-90"
               />
             </div>
           </RevealSection>
