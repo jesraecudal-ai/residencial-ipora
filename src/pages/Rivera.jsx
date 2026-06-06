@@ -636,6 +636,15 @@ export default function Rivera() {
               <h2 className="font-cormorant text-4xl text-ivory font-light">Why choose Residencial Iporá Boutique?</h2>
             </div>
           </RevealSection>
+          <RevealSection>
+            <div className="overflow-hidden rounded-3xl mb-12 h-64 md:h-80">
+              <img
+                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1400&q=80"
+                alt="Caregiver gently holding hands with elderly resident in a warm home setting"
+                className="w-full h-full object-cover opacity-70"
+              />
+            </div>
+          </RevealSection>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
             { icon: Heart, title: 'Because you love them', text: 'You have carried this weight long enough. Choosing Iporá Boutique is the greatest gift you can give your parent — a life fully lived, not merely managed.' },
