@@ -483,7 +483,7 @@ export default function Rivera() {
       </section>
 
       {/* Photo before Tiers */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-36 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-top"
           style={{ backgroundImage: "url('https://media.base44.com/images/public/6a050510a0e721e56d922807/4d36f9b7a_image.png')" }}
