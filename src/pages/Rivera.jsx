@@ -281,16 +281,30 @@ export default function Rivera() {
         </div>
       </section>
 
-      {/* Lifestyle photo section */}
-      <section className="relative h-72 md:h-96 overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1576765608866-5b51046452be?w=1800&q=80"
-          alt="Comfortable boutique living space"
-          className="w-full h-full object-cover opacity-50"
-        />
-        <div className="absolute inset-0 flex items-center justify-center" style={{ background: 'linear-gradient(135deg, rgba(10,8,2,0.7) 0%, rgba(212,175,55,0.1) 100%)' }}>
-          <div className="text-center px-5">
-            <p className="font-cormorant text-4xl md:text-6xl text-ivory font-light italic">"A home they are proud to call their own."</p>
+      {/* Lifestyle photo collage */}
+      <section className="py-6 px-4 md:px-8" style={{ background: 'linear-gradient(180deg, #0d1a0d 0%, #0a0a0a 100%)' }}>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-3 grid-rows-2 gap-2 h-80 md:h-[28rem]">
+            <div className="col-span-2 row-span-2 overflow-hidden rounded-2xl">
+              <img src="https://images.unsplash.com/photo-1576765608866-5b51046452be?w=900&q=80" alt="Caregiver and elderly person" className="w-full h-full object-contain bg-black/40" />
+            </div>
+            <div className="overflow-hidden rounded-2xl">
+              <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80" alt="Warm elderly care moment" className="w-full h-full object-contain bg-black/40" />
+            </div>
+            <div className="overflow-hidden rounded-2xl">
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80" alt="Caregiver with resident" className="w-full h-full object-contain bg-black/40" />
+            </div>
+          </div>
+          <div className="grid grid-cols-3 gap-2 mt-2 h-40 md:h-52">
+            <div className="overflow-hidden rounded-2xl">
+              <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&q=80" alt="Group activity" className="w-full h-full object-contain bg-black/40" />
+            </div>
+            <div className="overflow-hidden rounded-2xl">
+              <img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=600&q=80" alt="Comfortable home" className="w-full h-full object-contain bg-black/40" />
+            </div>
+            <div className="overflow-hidden rounded-2xl">
+              <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=600&q=80" alt="Warm living space" className="w-full h-full object-contain bg-black/40" />
+            </div>
           </div>
         </div>
       </section>
