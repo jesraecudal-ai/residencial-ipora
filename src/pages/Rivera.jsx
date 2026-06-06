@@ -114,8 +114,25 @@ export default function Rivera() {
         </div>
       </section>
 
+      {/* Photo strip */}
+      <section className="py-0">
+        <div className="grid grid-cols-3 md:grid-cols-5 h-48 md:h-64">
+          {[
+            'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80',
+            'https://images.unsplash.com/photo-1571508601891-ca5e7a713859?w=600&q=80',
+            'https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=600&q=80',
+            'https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=600&q=80',
+            'https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=600&q=80',
+          ].map((url, i) => (
+            <div key={i} className="overflow-hidden">
+              <img src={url} alt="" className="w-full h-full object-cover opacity-60 hover:opacity-80 transition-opacity duration-500" />
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* The Concept */}
-      <section className="py-24 relative">
+      <section className="py-24 relative" style={{ background: 'linear-gradient(180deg, #0a0a0a 0%, #1a1208 100%)' }}>
         <div className="max-w-7xl mx-auto px-5 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <RevealSection>
             <span className="font-inter text-xs text-champagne uppercase tracking-widest block mb-5">The ultimate act of love</span>
@@ -177,7 +194,7 @@ export default function Rivera() {
       </section>
 
       {/* Services */}
-      <section className="py-20">
+      <section className="py-20" style={{ background: 'linear-gradient(180deg, #1a1208 0%, #0d1a0d 100%)' }}>
         <div className="max-w-5xl mx-auto px-5 md:px-10">
           <RevealSection>
             <div className="text-center mb-14">
@@ -216,8 +233,22 @@ export default function Rivera() {
         </div>
       </section>
 
+      {/* Lifestyle photo section */}
+      <section className="relative h-72 md:h-96 overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1576765608866-5b51046452be?w=1800&q=80"
+          alt="Comfortable boutique living space"
+          className="w-full h-full object-cover opacity-50"
+        />
+        <div className="absolute inset-0 flex items-center justify-center" style={{ background: 'linear-gradient(135deg, rgba(10,8,2,0.7) 0%, rgba(212,175,55,0.1) 100%)' }}>
+          <div className="text-center px-5">
+            <p className="font-cormorant text-4xl md:text-6xl text-ivory font-light italic">"A home they are proud to call their own."</p>
+          </div>
+        </div>
+      </section>
+
       {/* Network section */}
-      <section className="py-20 border-t border-champagne/10">
+      <section className="py-20 border-t border-champagne/10" style={{ background: 'linear-gradient(180deg, #0d1a0d 0%, #0a0a0a 100%)' }}>
         <div className="max-w-5xl mx-auto px-5 md:px-10">
           <RevealSection>
             <div className="text-center mb-12">
@@ -266,7 +297,7 @@ export default function Rivera() {
       </section>
 
       {/* Compliance section */}
-      <section className="py-16 border-t border-champagne/10" style={{ background: 'linear-gradient(135deg, #080808 0%, #0d1520 100%)' }}>
+      <section className="py-16 border-t border-champagne/10" style={{ background: 'linear-gradient(135deg, #0d1520 0%, #1a1208 100%)' }}>
         <div className="max-w-5xl mx-auto px-5 md:px-10">
           <RevealSection>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -306,7 +337,7 @@ export default function Rivera() {
       </section>
 
       {/* Shared living section */}
-      <section className="py-16 border-t border-champagne/10">
+      <section className="py-16 border-t border-champagne/10" style={{ background: 'linear-gradient(180deg, #1a1208 0%, #0a0a0a 100%)' }}>
         <div className="max-w-4xl mx-auto px-5 md:px-10">
           <RevealSection>
             <div className="text-center mb-10">
@@ -316,6 +347,20 @@ export default function Rivera() {
                 Iporá Boutique residences operate as intimate shared-living environments. Depending on the size of the home, a small number of residents live together in a comfortable and personalized setting — for example, a three-bedroom residence may accommodate up to three residents.
               </p>
             </div>
+            {/* Photo grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+              {[
+                { url: 'https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=500&q=80', alt: 'Cozy living room' },
+                { url: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=500&q=80', alt: 'Bright kitchen' },
+                { url: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80', alt: 'Comfortable bedroom' },
+                { url: 'https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=500&q=80', alt: 'Garden terrace' },
+              ].map((photo, i) => (
+                <div key={i} className="overflow-hidden rounded-xl h-36 md:h-44">
+                  <img src={photo.url} alt={photo.alt} className="w-full h-full object-cover opacity-70 hover:opacity-90 transition-opacity duration-400" />
+                </div>
+              ))}
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="border border-champagne/20 rounded-2xl p-7">
                 <h3 className="font-cormorant text-xl text-champagne mb-3">What choosing a residence means</h3>
@@ -340,7 +385,7 @@ export default function Rivera() {
       </section>
 
       {/* Credibility anchor */}
-      <section className="py-16 border-t border-champagne/10">
+      <section className="py-16 border-t border-champagne/10" style={{ background: 'linear-gradient(180deg, #0a0a0a 0%, #0d1520 100%)' }}>
         <div className="max-w-4xl mx-auto px-5 md:px-10">
           <RevealSection>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -375,7 +420,7 @@ export default function Rivera() {
       </section>
 
       {/* Healthcare plan requirement */}
-      <section className="py-16 border-t border-champagne/10" style={{ background: 'linear-gradient(135deg, #0a0a0a 0%, #0f1628 100%)' }}>
+      <section className="py-16 border-t border-champagne/10" style={{ background: 'linear-gradient(135deg, #0f1628 0%, #1a1208 100%)' }}>
         <div className="max-w-4xl mx-auto px-5 md:px-10">
           <RevealSection>
             <div className="text-center mb-10">
@@ -429,8 +474,18 @@ export default function Rivera() {
         </div>
       </section>
 
+      {/* Full-width photo break */}
+      <section className="relative h-56 md:h-72 overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1800&q=80"
+          alt="Warm care environment"
+          className="w-full h-full object-cover opacity-40"
+        />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(5,5,5,0.8) 0%, rgba(212,175,55,0.08) 50%, rgba(5,5,5,0.8) 100%)' }} />
+      </section>
+
       {/* Email CTA */}
-      <section className="py-20">
+      <section className="py-20" style={{ background: 'linear-gradient(180deg, #0a0a0a 0%, #1a1208 50%, #0a0a0a 100%)' }}>
         <div className="max-w-3xl mx-auto px-5 md:px-10">
           <RevealSection>
             <div className="border border-champagne/30 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
@@ -546,7 +601,7 @@ export default function Rivera() {
       </section>
 
       {/* Why choose */}
-      <section className="py-16">
+      <section className="py-16" style={{ background: 'linear-gradient(180deg, #0d1520 0%, #0a0a0a 100%)' }}>
         <div className="max-w-5xl mx-auto px-5 md:px-10">
           <RevealSection>
             <div className="text-center mb-12">
@@ -574,7 +629,7 @@ export default function Rivera() {
       </section>
 
       {/* Footer mini */}
-      <section className="py-10 border-t border-ivory/10 text-center">
+      <section className="py-10 border-t border-champagne/20 text-center" style={{ background: '#050505' }}>
         <p className="font-inter text-ivory/30 text-sm mb-3">
           © {new Date().getFullYear()} Residencial Iporá · Residencial Iporá Boutique
         </p>
