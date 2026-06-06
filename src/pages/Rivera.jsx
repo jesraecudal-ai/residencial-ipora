@@ -109,6 +109,12 @@ export default function Rivera() {
 
   return (
     <div className="bg-obsidian min-h-screen overflow-x-hidden">
+      {/* SEO semantic content — visible to crawlers and AI engines */}
+      <div className="sr-only" aria-hidden="false">
+        <h1>Residencial Iporá Boutique — Cuidado de Adultos Mayores en Uruguay</h1>
+        <p>Residencial Iporá Boutique es un servicio premium de cuidado para adultos mayores en Uruguay, con residencias boutique en Colonia del Sacramento, Montevideo y Maldonado (Punta del Este). Apertura el 1 de agosto de 2026. Precio desde USD 4.500 por mes. Incluye cuidado 24 horas, médico semanal, nutricionista, trabajador social y actividades personalizadas. Fundado por Sonia Sanguinet y Nicolás Macedo, con más de 4 años de experiencia en Residencial Iporá Tacuarembó. Contacto: +598 98 282 938. Email: residencialipor@gmail.com.</p>
+        <p>Palabras clave: hogar adultos mayores Uruguay, geriátrico Colonia Uruguay, hogar ancianos Montevideo, cuidado adultos mayores Maldonado, residencial boutique Uruguay, senior care Uruguay, elderly care Uruguay, nursing home Uruguay, assisted living Uruguay, cuidado personalizado adultos mayores, residencia tercera edad Uruguay, hogar mayor Punta del Este, cuidado mayor Colonia del Sacramento.</p>
+      </div>
       {/* HERO */}
       <section className="relative min-h-screen flex items-center pt-24">
         <div
