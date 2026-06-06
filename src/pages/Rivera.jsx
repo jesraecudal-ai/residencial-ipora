@@ -483,12 +483,17 @@ export default function Rivera() {
       </section>
 
       {/* Photo before Tiers */}
-      <section className="py-0 bg-obsidian">
-        <img
-          src="https://media.base44.com/images/public/6a050510a0e721e56d922807/4d36f9b7a_image.png"
-          alt="Caregiver holding hands with elderly resident"
-          className="w-full object-contain max-h-[600px]"
+      <section className="relative py-24 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('https://media.base44.com/images/public/6a050510a0e721e56d922807/4d36f9b7a_image.png')" }}
         />
+        <div className="absolute inset-0 bg-obsidian/60" />
+        <div className="relative z-10 max-w-2xl mx-auto px-5 text-center">
+          <p className="font-cormorant text-3xl md:text-4xl text-ivory font-light italic">
+            "Every resident deserves warmth, dignity, and genuine human connection."
+          </p>
+        </div>
       </section>
 
       {/* Tiers section */}
@@ -646,12 +651,12 @@ export default function Rivera() {
             </div>
           </RevealSection>
           <RevealSection>
-            <div className="rounded-3xl mb-12 bg-obsidian overflow-hidden">
-              <img
-                src="https://media.base44.com/images/public/6a050510a0e721e56d922807/8fdbfca7e_image.png"
-                alt="Caregiver walking with elderly resident in a garden"
-                className="w-full object-contain max-h-[600px] opacity-90"
+            <div className="relative rounded-3xl mb-12 overflow-hidden h-72 md:h-96">
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: "url('https://media.base44.com/images/public/6a050510a0e721e56d922807/8fdbfca7e_image.png')" }}
               />
+              <div className="absolute inset-0 bg-obsidian/30" />
             </div>
           </RevealSection>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
