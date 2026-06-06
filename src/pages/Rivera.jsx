@@ -22,6 +22,54 @@ function useCountdown(targetDate) {
   return timeLeft;
 }
 
+const carouselPhotos = [
+  { url: 'https://images.unsplash.com/photo-1576765608866-5b51046452be?w=1800&q=80', alt: 'Caregiver and elderly person sharing a happy moment' },
+  { url: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1800&q=80', alt: 'Elderly couple enjoying time together' },
+  { url: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1800&q=80', alt: 'Group activity in a warm care home' },
+  { url: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1800&q=80', alt: 'Caregiver holding hands with elderly resident' },
+  { url: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=1800&q=80', alt: 'Bright comfortable living space' },
+  { url: 'https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=1800&q=80', alt: 'Warm family-like home environment' },
+];
+
+function CarouselSection() {
+  const [current, setCurrent] = useState(0);
+  useEffect(() => {
+    const timer = setInterval(() => setCurrent(p => (p + 1) % carouselPhotos.length), 4000);
+    return () => clearInterval(timer);
+  }, []);
+  return (
+    <section className="relative h-72 md:h-96 overflow-hidden">
+      {carouselPhotos.map((photo, i) => (
+        <img
+          key={i}
+          src={photo.url}
+          alt={photo.alt}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === current ? 'opacity-80' : 'opacity-0'}`}
+        />
+      ))}
+      {/* Dots */}
+      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
+        {carouselPhotos.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`w-2 h-2 rounded-full transition-all ${i === current ? 'bg-champagne w-5' : 'bg-white/40'}`}
+          />
+        ))}
+      </div>
+      {/* Arrows */}
+      <button
+        onClick={() => setCurrent(p => (p - 1 + carouselPhotos.length) % carouselPhotos.length)}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center text-lg transition-all"
+      >‹</button>
+      <button
+        onClick={() => setCurrent(p => (p + 1) % carouselPhotos.length)}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center text-lg transition-all"
+      >›</button>
+    </section>
+  );
+}
+
 function RevealSection({ children, delay = 0 }) {
   const ref = useRef(null);
   useEffect(() => {
@@ -474,15 +522,8 @@ export default function Rivera() {
         </div>
       </section>
 
-      {/* Full-width photo break */}
-      <section className="relative h-56 md:h-72 overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1576765608866-5b51046452be?w=1800&q=80"
-          alt="Elderly person and caregiver sharing a happy moment"
-          className="w-full h-full object-cover object-top opacity-75"
-        />
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(5,5,5,0.6) 0%, transparent 50%, rgba(5,5,5,0.6) 100%)' }} />
-      </section>
+      {/* Full-width photo carousel */}
+      <CarouselSection />
 
       {/* Email CTA */}
       <section className="py-20" style={{ background: 'linear-gradient(180deg, #0a0a0a 0%, #1a1208 50%, #0a0a0a 100%)' }}>
