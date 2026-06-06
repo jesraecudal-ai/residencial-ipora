@@ -679,6 +679,29 @@ export default function Rivera() {
         </div>
       </section>
 
+      {/* Emotional email CTA */}
+      <section className="py-20 border-t border-champagne/10" style={{ background: 'linear-gradient(180deg, #0a0a0a 0%, #1a1208 100%)' }}>
+        <div className="max-w-2xl mx-auto px-5 text-center">
+          <p className="font-inter text-champagne text-xs uppercase tracking-widest mb-6">One email can change everything</p>
+          <h2 className="font-cormorant text-4xl md:text-5xl text-ivory font-light leading-tight mb-6">
+            Your parent deserves to spend their remaining years <em className="text-champagne italic">truly living</em>.
+          </h2>
+          <p className="font-inter text-ivory/60 text-base leading-relaxed mb-4">
+            You've been carrying this alone for too long. The late-night worries. The guilt. The exhaustion of trying to be everything for someone you love so deeply.
+          </p>
+          <p className="font-inter text-ivory/60 text-base leading-relaxed mb-10">
+            Write to us. Tell us about them — their name, their story, what they love, what they need. We will respond personally, with honesty and care. No pressure. Just a conversation between people who understand what this moment means.
+          </p>
+          <a
+            href="mailto:residencialipor@gmail.com?subject=About%20my%20loved%20one&body=Hello%2C%0A%0AI%20want%20to%20tell%20you%20about%20my%20loved%20one%3A%0A%0ATheir%20name%3A%0ATheir%20age%3A%0AWhat%20they%20love%3A%0AWhat%20they%20need%3A%0A%0APlease%20reach%20out%20to%20me%20at%3A"
+            className="inline-flex items-center gap-3 px-10 py-5 rounded-full font-inter font-medium text-obsidian bg-champagne hover:brightness-110 transition-all text-base"
+          >
+            Write to us about them →
+          </a>
+          <p className="font-inter text-ivory/30 text-xs mt-5">We read and respond to every message personally.</p>
+        </div>
+      </section>
+
       {/* Footer mini */}
       <section className="py-10 border-t border-champagne/20 text-center" style={{ background: '#050505' }}>
         <p className="font-inter text-ivory/30 text-sm mb-3">
