@@ -110,10 +110,10 @@ export default function Rivera() {
   return (
     <div className="bg-obsidian min-h-screen overflow-x-hidden">
       {/* Language switcher */}
-      <div className="fixed top-0 left-0 right-0 z-[60] flex justify-end px-5 py-2 bg-obsidian/80 backdrop-blur-sm border-b border-champagne/10">
+      <div className="fixed top-20 right-5 z-[60]">
         <Link
           to="/rivera-es"
-          className="flex items-center gap-2 font-inter text-xs text-champagne border border-champagne/30 px-4 py-1.5 rounded-full hover:bg-champagne/10 transition-all"
+          className="flex items-center gap-2 font-inter text-xs text-champagne border border-champagne/30 bg-obsidian/80 backdrop-blur-sm px-4 py-1.5 rounded-full hover:bg-champagne/10 transition-all"
         >
           <Globe className="w-3 h-3" /> Ver en Español
         </Link>
@@ -126,7 +126,7 @@ export default function Rivera() {
         <p>Palabras clave: hogar adultos mayores Uruguay, geriátrico Colonia Uruguay, hogar ancianos Montevideo, cuidado adultos mayores Maldonado, residencial boutique Uruguay, senior care Uruguay, elderly care Uruguay, nursing home Uruguay, assisted living Uruguay, cuidado personalizado adultos mayores, residencia tercera edad Uruguay, hogar mayor Punta del Este, cuidado mayor Colonia del Sacramento.</p>
       </div>
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center pt-32">
+      <section className="relative min-h-screen flex items-center pt-24">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=1800&q=80')" }}

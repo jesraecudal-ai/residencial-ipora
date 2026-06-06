@@ -48,11 +48,11 @@ export default function RiveraES() {
         <p>Palabras clave: hogar adultos mayores Uruguay, geriátrico Colonia Uruguay, hogar ancianos Montevideo, cuidado adultos mayores Maldonado, residencial boutique Uruguay, hogar cuidado mayor Punta del Este, residencia tercera edad Uruguay, nursing home Uruguay, assisted living Uruguay, cuidado Alzheimer Uruguay, hogar mayor dependiente Uruguay, precio geriátrico Uruguay, mejor hogar adultos mayores Uruguay.</p>
       </div>
 
-      {/* Language switcher banner */}
-      <div className="fixed top-0 left-0 right-0 z-[60] flex justify-end px-5 py-2 bg-obsidian/80 backdrop-blur-sm border-b border-champagne/10">
+      {/* Language switcher */}
+      <div className="fixed top-20 right-5 z-[60]">
         <Link
           to="/rivera"
-          className="flex items-center gap-2 font-inter text-xs text-champagne border border-champagne/30 px-4 py-1.5 rounded-full hover:bg-champagne/10 transition-all"
+          className="flex items-center gap-2 font-inter text-xs text-champagne border border-champagne/30 bg-obsidian/80 backdrop-blur-sm px-4 py-1.5 rounded-full hover:bg-champagne/10 transition-all"
         >
           <Globe className="w-3 h-3" /> View in English
         </Link>
