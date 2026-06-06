@@ -258,7 +258,7 @@ export default function Rivera() {
             <div className="border border-champagne/20 rounded-2xl p-7 bg-champagne/3">
               <p className="font-inter text-ivory/40 text-xs uppercase tracking-widest mb-3">A note on residence visits</p>
               <p className="font-inter text-ivory/60 text-sm leading-relaxed">
-                When visiting a residence, real estate representatives or property owners may be present — particularly if the home is vacant or newly available within our network. This is a natural part of our concierge-style placement process and reflects the premium, personalized approach Iporá Boutique takes in matching each resident with the right home. It is a feature, not a limitation.
+                When visiting a residence, real estate representatives or property owners may be present — particularly if the home is vacant or newly available within our network. This is part of our concierge-style placement process: we work closely with real estate professionals across Uruguay to give families access to exceptional homes that could not be found through conventional channels. You are not viewing a generic care facility. You are previewing a curated residence, selected specifically because it meets the standards of the Iporá Boutique Care Network.
               </p>
             </div>
           </RevealSection>
