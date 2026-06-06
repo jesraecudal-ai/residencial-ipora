@@ -477,11 +477,11 @@ export default function Rivera() {
       {/* Full-width photo break */}
       <section className="relative h-56 md:h-72 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1800&q=80"
-          alt="Warm care environment"
-          className="w-full h-full object-cover opacity-40"
+          src="https://images.unsplash.com/photo-1576765608866-5b51046452be?w=1800&q=80"
+          alt="Elderly person and caregiver sharing a happy moment"
+          className="w-full h-full object-cover object-top opacity-75"
         />
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(5,5,5,0.8) 0%, rgba(212,175,55,0.08) 50%, rgba(5,5,5,0.8) 100%)' }} />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(5,5,5,0.6) 0%, transparent 50%, rgba(5,5,5,0.6) 100%)' }} />
       </section>
 
       {/* Email CTA */}
