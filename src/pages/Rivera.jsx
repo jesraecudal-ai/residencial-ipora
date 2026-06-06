@@ -510,8 +510,7 @@ export default function Rivera() {
         </div>
       </section>
 
-      {/* Full-width photo carousel */}
-      <CarouselSection />
+
 
       {/* Email CTA */}
       <section className="py-20" style={{ background: 'linear-gradient(180deg, #0a0a0a 0%, #1a1208 50%, #0a0a0a 100%)' }}>
