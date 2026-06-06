@@ -10,9 +10,9 @@ function useCountdown(targetDate) {
       if (diff <= 0) return setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       setTimeLeft({
         days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((diff / 1000 / 60) % 60),
-        seconds: Math.floor((diff / 1000) % 60),
+        hours: Math.floor(diff / (1000 * 60 * 60) % 24),
+        minutes: Math.floor(diff / 1000 / 60 % 60),
+        seconds: Math.floor(diff / 1000 % 60)
       });
     };
     calc();
@@ -23,51 +23,51 @@ function useCountdown(targetDate) {
 }
 
 const carouselPhotos = [
-  { url: 'https://images.unsplash.com/photo-1576765608866-5b51046452be?w=1800&q=80', alt: 'Caregiver and elderly person sharing a happy moment' },
-  { url: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1800&q=80', alt: 'Elderly couple enjoying time together' },
-  { url: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1800&q=80', alt: 'Group activity in a warm care home' },
-  { url: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1800&q=80', alt: 'Caregiver holding hands with elderly resident' },
-  { url: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=1800&q=80', alt: 'Bright comfortable living space' },
-  { url: 'https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=1800&q=80', alt: 'Warm family-like home environment' },
-];
+{ url: 'https://images.unsplash.com/photo-1576765608866-5b51046452be?w=1800&q=80', alt: 'Caregiver and elderly person sharing a happy moment' },
+{ url: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1800&q=80', alt: 'Elderly couple enjoying time together' },
+{ url: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1800&q=80', alt: 'Group activity in a warm care home' },
+{ url: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1800&q=80', alt: 'Caregiver holding hands with elderly resident' },
+{ url: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=1800&q=80', alt: 'Bright comfortable living space' },
+{ url: 'https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=1800&q=80', alt: 'Warm family-like home environment' }];
+
 
 function CarouselSection() {
   const [current, setCurrent] = useState(0);
   useEffect(() => {
-    const timer = setInterval(() => setCurrent(p => (p + 1) % carouselPhotos.length), 4000);
+    const timer = setInterval(() => setCurrent((p) => (p + 1) % carouselPhotos.length), 4000);
     return () => clearInterval(timer);
   }, []);
   return (
     <section className="relative h-72 md:h-96 overflow-hidden">
-      {carouselPhotos.map((photo, i) => (
-        <img
-          key={i}
-          src={photo.url}
-          alt={photo.alt}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === current ? 'opacity-80' : 'opacity-0'}`}
-        />
-      ))}
+      {carouselPhotos.map((photo, i) =>
+      <img
+        key={i}
+        src={photo.url}
+        alt={photo.alt}
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === current ? 'opacity-80' : 'opacity-0'}`} />
+
+      )}
       {/* Dots */}
       <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
-        {carouselPhotos.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`w-2 h-2 rounded-full transition-all ${i === current ? 'bg-champagne w-5' : 'bg-white/40'}`}
-          />
-        ))}
+        {carouselPhotos.map((_, i) =>
+        <button
+          key={i}
+          onClick={() => setCurrent(i)}
+          className={`w-2 h-2 rounded-full transition-all ${i === current ? 'bg-champagne w-5' : 'bg-white/40'}`} />
+
+        )}
       </div>
       {/* Arrows */}
       <button
-        onClick={() => setCurrent(p => (p - 1 + carouselPhotos.length) % carouselPhotos.length)}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center text-lg transition-all"
-      >‹</button>
+        onClick={() => setCurrent((p) => (p - 1 + carouselPhotos.length) % carouselPhotos.length)}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center text-lg transition-all">
+        ‹</button>
       <button
-        onClick={() => setCurrent(p => (p + 1) % carouselPhotos.length)}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center text-lg transition-all"
-      >›</button>
-    </section>
-  );
+        onClick={() => setCurrent((p) => (p + 1) % carouselPhotos.length)}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center text-lg transition-all">
+        ›</button>
+    </section>);
+
 }
 
 function RevealSection({ children, delay = 0 }) {
@@ -91,18 +91,18 @@ function RevealSection({ children, delay = 0 }) {
 }
 
 const services = [
-  { icon: Clock, text: '24-hour continuous care — 2 caregivers per day shift' },
-  { icon: Utensils, text: 'Full board included with nutritionist guidance' },
-  { icon: Stethoscope, text: 'Weekly in-person physician visits' },
-  { icon: Users, text: 'Social worker with regular visits' },
-  { icon: Heart, text: 'Personalized social and recreational activities' },
-  { icon: Shield, text: 'Maximum security and privacy environment' },
-];
+{ icon: Clock, text: '24-hour continuous care — 2 caregivers per day shift' },
+{ icon: Utensils, text: 'Full board included with nutritionist guidance' },
+{ icon: Stethoscope, text: 'Weekly in-person physician visits' },
+{ icon: Users, text: 'Social worker with regular visits' },
+{ icon: Heart, text: 'Personalized social and recreational activities' },
+{ icon: Shield, text: 'Maximum security and privacy environment' }];
+
 
 const notIncluded = [
-  'Personal hygiene products',
-  'Prescription medications',
-];
+'Personal hygiene products',
+'Prescription medications'];
+
 
 export default function Rivera() {
   const timeLeft = useCountdown('2026-08-01T00:00:00');
@@ -114,8 +114,8 @@ export default function Rivera() {
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=1800&q=80')" }}
-          aria-hidden="true"
-        />
+          aria-hidden="true" />
+        
         <div className="absolute inset-0" style={{
           background: 'radial-gradient(ellipse at 60% 40%, rgba(212,175,55,0.08) 0%, transparent 70%)'
         }} aria-hidden="true" />
@@ -145,16 +145,16 @@ export default function Rivera() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="mailto:residencialipor@gmail.com?subject=Inquiry%20about%20Ipor%C3%A1%20Boutique&body=Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20Ipor%C3%A1%20Boutique%20for%20my%20loved%20one."
-                className="cta-btn cta-btn-gold inline-flex items-center gap-2 px-8 py-4 rounded-full font-inter font-medium text-obsidian bg-champagne hover:brightness-110 transition-all"
-              >
+                className="cta-btn cta-btn-gold inline-flex items-center gap-2 px-8 py-4 rounded-full font-inter font-medium text-obsidian bg-champagne hover:brightness-110 transition-all">
+                
                 Contact us <ArrowRight className="w-4 h-4" />
               </a>
               <a
                 href="https://wa.me/59898282938?text=Hello%20Nicol%C3%A1s%2C%20I%27m%20interested%20in%20Ipor%C3%A1%20Boutique"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cta-btn inline-flex items-center gap-2 px-8 py-4 rounded-full font-inter font-medium text-ivory border border-ivory/20 hover:bg-ivory/10 transition-all"
-              >
+                className="cta-btn inline-flex items-center gap-2 px-8 py-4 rounded-full font-inter font-medium text-ivory border border-ivory/20 hover:bg-ivory/10 transition-all">
+                
                 WhatsApp Nicolás
               </a>
             </div>
@@ -166,16 +166,16 @@ export default function Rivera() {
       <section className="py-0">
         <div className="grid grid-cols-3 md:grid-cols-5 h-48 md:h-64">
           {[
-            'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80',
-            'https://images.unsplash.com/photo-1571508601891-ca5e7a713859?w=600&q=80',
-            'https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=600&q=80',
-            'https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=600&q=80',
-            'https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=600&q=80',
-          ].map((url, i) => (
-            <div key={i} className="overflow-hidden">
+          'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80',
+          'https://images.unsplash.com/photo-1571508601891-ca5e7a713859?w=600&q=80',
+          'https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=600&q=80',
+          'https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=600&q=80',
+          'https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=600&q=80'].
+          map((url, i) =>
+          <div key={i} className="overflow-hidden">
               <img src={url} alt="" className="w-full h-full object-cover opacity-60 hover:opacity-80 transition-opacity duration-500" />
             </div>
-          ))}
+          )}
         </div>
       </section>
 
@@ -223,8 +223,8 @@ export default function Rivera() {
                 <img
                   src="https://images.unsplash.com/photo-1571508601891-ca5e7a713859?w=800"
                   alt="Luxury boutique space, intimate and elegant environment for older adults"
-                  className="w-full h-96 object-cover opacity-70"
-                />
+                  className="w-full h-96 object-cover opacity-70" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-obsidian/80 to-transparent flex items-end p-8">
                   <div>
                     <p className="font-cormorant text-2xl text-ivory">Boutique residences across Uruguay</p>
@@ -255,8 +255,8 @@ export default function Rivera() {
           </RevealSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-            {services.map((s, i) => (
-              <RevealSection key={i} delay={i * 70}>
+            {services.map((s, i) =>
+            <RevealSection key={i} delay={i * 70}>
                 <div className="flex items-center gap-4 p-5 border border-champagne/15 rounded-xl hover:border-champagne/40 transition-colors duration-300">
                   <div className="w-10 h-10 rounded-xl bg-champagne/10 flex items-center justify-center flex-shrink-0">
                     <s.icon className="w-5 h-5 text-champagne" />
@@ -264,7 +264,7 @@ export default function Rivera() {
                   <span className="font-inter text-ivory/80 text-sm">{s.text}</span>
                 </div>
               </RevealSection>
-            ))}
+            )}
           </div>
 
           {/* Not included */}
@@ -272,9 +272,9 @@ export default function Rivera() {
             <div className="border border-ivory/10 rounded-xl p-6">
               <p className="font-inter text-ivory/40 text-xs uppercase tracking-wide mb-3">Not included in the price:</p>
               <div className="flex gap-6 flex-wrap">
-                {notIncluded.map((item) => (
-                  <span key={item} className="font-inter text-ivory/40 text-sm">{item}</span>
-                ))}
+                {notIncluded.map((item) =>
+                <span key={item} className="font-inter text-ivory/40 text-sm">{item}</span>
+                )}
               </div>
             </div>
           </RevealSection>
@@ -286,13 +286,13 @@ export default function Rivera() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-3 grid-rows-2 gap-2 h-80 md:h-[28rem]">
             <div className="col-span-2 row-span-2 overflow-hidden rounded-2xl">
-              <img src="https://images.unsplash.com/photo-1576765608866-5b51046452be?w=900&q=80" alt="Caregiver and elderly person" className="w-full h-full object-contain bg-black/40" />
+              <img src="https://images.unsplash.com/photo-1576765608866-5b51046452be?w=900&q=80" alt="Caregiver and elderly person" className="w-full h-full object-contain bg-black/40 hidden" />
             </div>
             <div className="overflow-hidden rounded-2xl">
               <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80" alt="Warm elderly care moment" className="w-full h-full object-contain bg-black/40" />
             </div>
             <div className="overflow-hidden rounded-2xl">
-              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80" alt="Caregiver with resident" className="w-full h-full object-contain bg-black/40" />
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80" alt="Caregiver with resident" className="w-full h-full object-contain bg-black/40 hidden" />
             </div>
           </div>
           <div className="grid grid-cols-3 gap-2 mt-2 h-40 md:h-52">
@@ -327,14 +327,14 @@ export default function Rivera() {
           <RevealSection delay={80}>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
               {[
-                { icon: Camera, title: 'View residence photos', text: 'Browse photos of available homes within the Iporá network before making any decision.' },
-                { icon: MessageSquare, title: 'Request information', text: 'Ask questions about any residence — its location, layout, environment, and current availability.' },
-                { icon: Calendar, title: 'Schedule a visit', text: 'Arrange an in-person visit to any residence you are considering for your loved one.' },
-                { icon: Heart, title: 'Discuss care needs', text: 'Meet with the Iporá team before admission to ensure we understand your loved one fully.' },
-                { icon: Home, title: 'Participate in selection', text: 'Families are active participants in choosing the residence — not passive recipients of an assignment.' },
-                { icon: MapPin, title: 'Network across Uruguay', text: 'Through partnerships with real estate professionals, we can identify homes based on your preferred location and lifestyle.' },
-              ].map((item, i) => (
-                <div key={i} className="flex gap-4 p-5 border border-champagne/15 rounded-xl hover:border-champagne/35 transition-colors">
+              { icon: Camera, title: 'View residence photos', text: 'Browse photos of available homes within the Iporá network before making any decision.' },
+              { icon: MessageSquare, title: 'Request information', text: 'Ask questions about any residence — its location, layout, environment, and current availability.' },
+              { icon: Calendar, title: 'Schedule a visit', text: 'Arrange an in-person visit to any residence you are considering for your loved one.' },
+              { icon: Heart, title: 'Discuss care needs', text: 'Meet with the Iporá team before admission to ensure we understand your loved one fully.' },
+              { icon: Home, title: 'Participate in selection', text: 'Families are active participants in choosing the residence — not passive recipients of an assignment.' },
+              { icon: MapPin, title: 'Network across Uruguay', text: 'Through partnerships with real estate professionals, we can identify homes based on your preferred location and lifestyle.' }].
+              map((item, i) =>
+              <div key={i} className="flex gap-4 p-5 border border-champagne/15 rounded-xl hover:border-champagne/35 transition-colors">
                   <div className="w-9 h-9 rounded-lg bg-champagne/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <item.icon className="w-4 h-4 text-champagne" />
                   </div>
@@ -343,7 +343,7 @@ export default function Rivera() {
                     <p className="font-inter text-ivory/40 text-xs leading-relaxed">{item.text}</p>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </RevealSection>
 
@@ -380,18 +380,18 @@ export default function Rivera() {
               </div>
               <div className="space-y-3">
                 {[
-                  'Accessibility standards for reduced mobility',
-                  'Emergency access and safety infrastructure',
-                  'Resident comfort and spatial requirements',
-                  'Compliance with Uruguayan elderly care regulations',
-                  'Pre-approved portfolio for immediate placement',
-                  'Custom property evaluation available upon request',
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 p-4 border border-champagne/15 rounded-xl">
+                'Accessibility standards for reduced mobility',
+                'Emergency access and safety infrastructure',
+                'Resident comfort and spatial requirements',
+                'Compliance with Uruguayan elderly care regulations',
+                'Pre-approved portfolio for immediate placement',
+                'Custom property evaluation available upon request'].
+                map((item, i) =>
+                <div key={i} className="flex items-center gap-3 p-4 border border-champagne/15 rounded-xl">
                     <CheckCircle className="w-4 h-4 text-champagne flex-shrink-0" />
                     <span className="font-inter text-ivory/60 text-sm">{item}</span>
                   </div>
-                ))}
+                )}
               </div>
             </div>
           </RevealSection>
@@ -412,15 +412,15 @@ export default function Rivera() {
             {/* Photo grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
               {[
-                { url: 'https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=500&q=80', alt: 'Cozy living room' },
-                { url: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=500&q=80', alt: 'Bright kitchen' },
-                { url: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80', alt: 'Comfortable bedroom' },
-                { url: 'https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=500&q=80', alt: 'Garden terrace' },
-              ].map((photo, i) => (
-                <div key={i} className="overflow-hidden rounded-xl h-36 md:h-44">
+              { url: 'https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=500&q=80', alt: 'Cozy living room' },
+              { url: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=500&q=80', alt: 'Bright kitchen' },
+              { url: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80', alt: 'Comfortable bedroom' },
+              { url: 'https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=500&q=80', alt: 'Garden terrace' }].
+              map((photo, i) =>
+              <div key={i} className="overflow-hidden rounded-xl h-36 md:h-44">
                   <img src={photo.url} alt={photo.alt} className="w-full h-full object-cover opacity-70 hover:opacity-90 transition-opacity duration-400" />
                 </div>
-              ))}
+              )}
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -465,16 +465,16 @@ export default function Rivera() {
               </div>
               <div className="space-y-4">
                 {[
-                  { number: '4+', label: 'Years of continuous care operation in Tacuarembó' },
-                  { number: '100%', label: 'Families who chose to renew month after month' },
-                  { number: 'Network', label: 'Of pre-approved boutique residences across Uruguay' },
-                  { number: 'Limited', label: 'Spots per residence — by design, not by circumstance' },
-                ].map((stat) => (
-                  <div key={stat.label} className="flex items-center gap-4 border border-champagne/15 rounded-xl px-5 py-4">
+                { number: '4+', label: 'Years of continuous care operation in Tacuarembó' },
+                { number: '100%', label: 'Families who chose to renew month after month' },
+                { number: 'Network', label: 'Of pre-approved boutique residences across Uruguay' },
+                { number: 'Limited', label: 'Spots per residence — by design, not by circumstance' }].
+                map((stat) =>
+                <div key={stat.label} className="flex items-center gap-4 border border-champagne/15 rounded-xl px-5 py-4">
                     <span className="font-cormorant text-2xl text-champagne font-light w-24 flex-shrink-0">{stat.number}</span>
                     <span className="font-inter text-ivory/60 text-sm">{stat.label}</span>
                   </div>
-                ))}
+                )}
               </div>
             </div>
           </RevealSection>
@@ -494,15 +494,15 @@ export default function Rivera() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {[
-                { title: 'Mutualist plan', text: 'Uruguay\'s established mutual health system. We help you enroll and coordinate all visits and follow-ups.' },
-                { title: 'Private health insurance', text: 'Premium private coverage options with broader specialist access and faster response times.' },
-                { title: 'We guide you', text: 'Not sure what plan is right? Our team walks every family through available options before admission.' },
-              ].map((item, i) => (
-                <div key={i} className="border border-champagne/15 rounded-2xl p-6 hover:border-champagne/35 transition-colors">
+              { title: 'Mutualist plan', text: 'Uruguay\'s established mutual health system. We help you enroll and coordinate all visits and follow-ups.' },
+              { title: 'Private health insurance', text: 'Premium private coverage options with broader specialist access and faster response times.' },
+              { title: 'We guide you', text: 'Not sure what plan is right? Our team walks every family through available options before admission.' }].
+              map((item, i) =>
+              <div key={i} className="border border-champagne/15 rounded-2xl p-6 hover:border-champagne/35 transition-colors">
                   <h3 className="font-cormorant text-lg text-champagne mb-2">{item.title}</h3>
                   <p className="font-inter text-ivory/50 text-sm leading-relaxed">{item.text}</p>
                 </div>
-              ))}
+              )}
             </div>
           </RevealSection>
         </div>
@@ -519,17 +519,17 @@ export default function Rivera() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { tier: 'Tier 1', name: 'Independent Support', price: 'from USD 4,500/mo', desc: 'For elders who are largely independent but benefit from daily companionship, meals, and light supervision. Ideal for early stages.' },
-                { tier: 'Tier 2', name: 'Assisted Living', price: 'Customized pricing', desc: 'For residents who need help with daily activities — bathing, medication, mobility — while still enjoying active social participation.', featured: true },
-                { tier: 'Tier 3', name: 'Full Dependency Care', price: 'Customized pricing', desc: 'For residents requiring round-the-clock assistance, specialized nursing support, and intensive daily care management.' },
-              ].map((t, i) => (
-                <div key={i} className={`rounded-2xl p-7 ${t.featured ? 'border-2 border-champagne bg-champagne/5' : 'border border-champagne/20'}`}>
+              { tier: 'Tier 1', name: 'Independent Support', price: 'from USD 4,500/mo', desc: 'For elders who are largely independent but benefit from daily companionship, meals, and light supervision. Ideal for early stages.' },
+              { tier: 'Tier 2', name: 'Assisted Living', price: 'Customized pricing', desc: 'For residents who need help with daily activities — bathing, medication, mobility — while still enjoying active social participation.', featured: true },
+              { tier: 'Tier 3', name: 'Full Dependency Care', price: 'Customized pricing', desc: 'For residents requiring round-the-clock assistance, specialized nursing support, and intensive daily care management.' }].
+              map((t, i) =>
+              <div key={i} className={`rounded-2xl p-7 ${t.featured ? 'border-2 border-champagne bg-champagne/5' : 'border border-champagne/20'}`}>
                   <span className="font-inter text-xs text-champagne uppercase tracking-widest block mb-2">{t.tier}</span>
                   <h3 className="font-cormorant text-xl text-ivory mb-2">{t.name}</h3>
                   <p className="font-inter text-champagne text-sm font-medium mb-3">{t.price}</p>
                   <p className="font-inter text-ivory/50 text-sm leading-relaxed">{t.desc}</p>
                 </div>
-              ))}
+              )}
             </div>
             <p className="font-inter text-ivory/30 text-xs text-center mt-6">Exact pricing is determined after a private intake conversation about your loved one's specific needs and current health status.</p>
           </RevealSection>
@@ -565,16 +565,16 @@ export default function Rivera() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                   <a
                     href="mailto:residencialipor@gmail.com?subject=Inquiry%20about%20Ipor%C3%A1%20Boutique&body=Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20Ipor%C3%A1%20Boutique%20for%20my%20loved%20one.%0A%0ATheir%20name%3A%0ATheir%20age%3A%0ATheir%20current%20needs%3A%0A%0APlease%20contact%20me%20at%3A"
-                    className="cta-btn cta-btn-gold px-8 py-4 rounded-full font-inter font-medium text-obsidian bg-champagne hover:brightness-110 transition-all inline-flex items-center gap-2 justify-center"
-                  >
+                    className="cta-btn cta-btn-gold px-8 py-4 rounded-full font-inter font-medium text-obsidian bg-champagne hover:brightness-110 transition-all inline-flex items-center gap-2 justify-center">
+                    
                     Send us an email →
                   </a>
                   <a
                     href="https://wa.me/59898282938?text=Hello%20Nicol%C3%A1s%2C%20I%27m%20interested%20in%20Ipor%C3%A1%20Boutique%20for%20my%20loved%20one."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="cta-btn px-8 py-4 rounded-full font-inter font-medium text-ivory border border-ivory/20 hover:bg-ivory/5 transition-all inline-flex items-center gap-2 justify-center text-sm"
-                  >
+                    className="cta-btn px-8 py-4 rounded-full font-inter font-medium text-ivory border border-ivory/20 hover:bg-ivory/5 transition-all inline-flex items-center gap-2 justify-center text-sm">
+                    
                     Or WhatsApp Nicolás
                   </a>
                 </div>
@@ -614,22 +614,22 @@ export default function Rivera() {
                 </thead>
                 <tbody className="divide-y divide-ivory/5">
                   {[
-                    { feature: 'Monthly cost (USD)', a: '3,500–5,000', b: '1,500–3,000*', c: 'from 4,500' },
-                    { feature: 'Overnight care included', a: 'Extra', b: '✓', c: '✓' },
-                    { feature: 'Weekly visiting physician', a: '✗', b: 'Emergencies only', c: '✓' },
-                    { feature: 'Nutritionist included', a: '✗', b: '✗', c: '✓' },
-                    { feature: 'Social worker', a: '✗', b: '✗', c: '✓' },
-                    { feature: 'Personalized activities', a: '✗', b: 'Group only', c: '✓ Individual' },
-                    { feature: '1-to-1 attention', a: '✓', b: '✗ (1 to 8+)', c: '✓ exclusive ratio' },
-                    { feature: 'Peace of mind for family', a: 'Low', b: 'Medium', c: '✓ Maximum' },
-                  ].map((row, i) => (
-                    <tr key={i}>
+                  { feature: 'Monthly cost (USD)', a: '3,500–5,000', b: '1,500–3,000*', c: 'from 4,500' },
+                  { feature: 'Overnight care included', a: 'Extra', b: '✓', c: '✓' },
+                  { feature: 'Weekly visiting physician', a: '✗', b: 'Emergencies only', c: '✓' },
+                  { feature: 'Nutritionist included', a: '✗', b: '✗', c: '✓' },
+                  { feature: 'Social worker', a: '✗', b: '✗', c: '✓' },
+                  { feature: 'Personalized activities', a: '✗', b: 'Group only', c: '✓ Individual' },
+                  { feature: '1-to-1 attention', a: '✓', b: '✗ (1 to 8+)', c: '✓ exclusive ratio' },
+                  { feature: 'Peace of mind for family', a: 'Low', b: 'Medium', c: '✓ Maximum' }].
+                  map((row, i) =>
+                  <tr key={i}>
                       <td className="font-inter text-ivory/60 text-sm py-3 pr-4">{row.feature}</td>
                       <td className="font-inter text-ivory/30 text-sm py-3 px-4 text-center">{row.a}</td>
                       <td className="font-inter text-ivory/30 text-sm py-3 px-4 text-center">{row.b}</td>
                       <td className="font-inter text-champagne text-sm py-3 px-4 text-center font-medium bg-champagne/5 rounded">{row.c}</td>
                     </tr>
-                  ))}
+                  )}
                 </tbody>
               </table>
               <p className="font-inter text-ivory/20 text-xs mt-3">* Standard nursing home: basic costs, not including frequent extras (diapers, medications, additional medical care, transfers).</p>
@@ -646,8 +646,8 @@ export default function Rivera() {
                 href="https://wa.me/59898282938?text=Hello%20Nicol%C3%A1s%2C%20I%27d%20like%20to%20know%20the%20exact%20price%20of%20Ipor%C3%A1%20Boutique"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cta-btn cta-btn-gold flex-shrink-0 px-7 py-3 rounded-full font-inter font-medium text-obsidian bg-champagne hover:brightness-110 transition-all text-sm whitespace-nowrap"
-              >
+                className="cta-btn cta-btn-gold flex-shrink-0 px-7 py-3 rounded-full font-inter font-medium text-obsidian bg-champagne hover:brightness-110 transition-all text-sm whitespace-nowrap">
+                
                 See exact price →
               </a>
             </div>
@@ -665,11 +665,11 @@ export default function Rivera() {
           </RevealSection>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { icon: Heart, title: 'Because you love them', text: 'You have carried this weight long enough. Choosing Iporá Boutique is the greatest gift you can give your parent — a life fully lived, not merely managed.' },
-              { icon: Shield, title: 'A home, not a ward', text: "No hospital corridors. No institutional schedules. A boutique home where your loved one's remaining years are filled with warmth, dignity, and real human connection." },
-              { icon: Star, title: 'Proven, not promised', text: 'Over 4 years running Residencial Iporá in Tacuarembó. Families who trusted us — and still do. That is the only credential that matters.' },
-            ].map((item, i) => (
-              <RevealSection key={item.title} delay={i * 100}>
+            { icon: Heart, title: 'Because you love them', text: 'You have carried this weight long enough. Choosing Iporá Boutique is the greatest gift you can give your parent — a life fully lived, not merely managed.' },
+            { icon: Shield, title: 'A home, not a ward', text: "No hospital corridors. No institutional schedules. A boutique home where your loved one's remaining years are filled with warmth, dignity, and real human connection." },
+            { icon: Star, title: 'Proven, not promised', text: 'Over 4 years running Residencial Iporá in Tacuarembó. Families who trusted us — and still do. That is the only credential that matters.' }].
+            map((item, i) =>
+            <RevealSection key={item.title} delay={i * 100}>
                 <div className="border border-champagne/15 rounded-2xl p-7 text-center hover:border-champagne/40 transition-colors">
                   <div className="w-12 h-12 rounded-full bg-champagne/10 flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-6 h-6 text-champagne" />
@@ -678,7 +678,7 @@ export default function Rivera() {
                   <p className="font-inter text-ivory/50 text-sm">{item.text}</p>
                 </div>
               </RevealSection>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -701,14 +701,14 @@ export default function Rivera() {
           rel="noopener noreferrer"
           className="whatsapp-pulse w-14 h-14 rounded-full flex items-center justify-center shadow-xl"
           style={{ backgroundColor: '#25D366' }}
-          aria-label="Contact via WhatsApp"
-        >
+          aria-label="Contact via WhatsApp">
+          
           <svg viewBox="0 0 24 24" className="w-7 h-7 fill-white">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
             <path d="M12 0C5.373 0 0 5.373 0 12c0 2.065.525 4.004 1.445 5.694L0 24l6.485-1.42A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.368l-.36-.214-3.735.818.832-3.64-.234-.374A9.818 9.818 0 0112 2.182c5.424 0 9.818 4.394 9.818 9.818S17.424 21.818 12 21.818z" />
           </svg>
         </a>
       </div>
-    </div>
-  );
+    </div>);
+
 }
