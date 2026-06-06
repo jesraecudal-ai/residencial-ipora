@@ -482,6 +482,17 @@ export default function Rivera() {
         </div>
       </section>
 
+      {/* Photo before Tiers */}
+      <section className="py-0">
+        <div className="overflow-hidden h-72 md:h-96">
+          <img
+            src="https://media.base44.com/images/public/6a050510a0e721e56d922807/4d36f9b7a_image.png"
+            alt="Caregiver holding hands with elderly resident"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </section>
+
       {/* Tiers section */}
       <section className="py-20" style={{ background: 'linear-gradient(180deg, #0f1628 0%, #050505 100%)' }}>
         <div className="max-w-4xl mx-auto px-5 md:px-10">
