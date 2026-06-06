@@ -91,7 +91,7 @@ function RevealSection({ children, delay = 0 }) {
 }
 
 const services = [
-{ icon: Clock, text: '24-hour continuous care — 2 caregivers per day shift' },
+{ icon: Clock, text: '24-hour continuous care, 7 days a week' },
 { icon: Utensils, text: 'Full board included with nutritionist guidance' },
 { icon: Stethoscope, text: 'Weekly in-person physician visits' },
 { icon: Users, text: 'Social worker with regular visits' },
