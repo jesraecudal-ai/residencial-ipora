@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { ArrowRight, Diamond, Shield, Star, Users, Utensils, Stethoscope, Heart, Clock } from 'lucide-react';
+import { ArrowRight, Diamond, Shield, Star, Users, Utensils, Stethoscope, Heart, Clock, MapPin, Camera, Calendar, MessageSquare, CheckCircle, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 function useCountdown(targetDate) {
@@ -76,7 +76,7 @@ export default function Rivera() {
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 mb-8">
               <div className="w-2 h-2 rounded-full bg-champagne animate-pulse" />
-              <span className="font-inter text-champagne text-xs uppercase tracking-widest">Exclusive project · Rivera, Punta del Este, Uruguay · 2026</span>
+              <span className="font-inter text-champagne text-xs uppercase tracking-widest">Premium Care Network · Uruguay</span>
             </div>
 
             <h1 className="font-cormorant text-6xl md:text-8xl text-ivory font-light leading-none mb-6">
@@ -85,40 +85,31 @@ export default function Rivera() {
             </h1>
 
             <p className="font-inter text-ivory/60 text-lg max-w-xl leading-relaxed mb-6">
-              You love them deeply — but you are exhausted. Caring for an aging parent at home while holding a career, raising your own children, and managing your life is one of the hardest things a person can do. Iporá Boutique exists because your loved one deserves more than survival. They deserve to truly <em className="text-ivory/90">live</em>.
+              You love them deeply — but you are exhausted. Caring for an aging parent at home is one of the hardest things a person can do. Iporá Boutique exists because your loved one deserves more than survival. They deserve to truly <em className="text-ivory/90">live</em>.
             </p>
             <div className="border border-champagne/20 rounded-2xl px-6 py-4 mb-10 max-w-xl">
-              <p className="font-inter text-champagne text-sm font-medium mb-1">Confirmed opening: August 1, 2026</p>
+              <p className="font-inter text-champagne text-sm font-medium mb-1">A care network across Uruguay</p>
               <p className="font-inter text-ivory/50 text-sm leading-relaxed">
-                This project is in its capitalization phase. There is no physical location yet — there will be on opening day. Our only credential is what already exists: <strong className="text-ivory/80">Residencial Iporá in Tacuarembó</strong>, operating with excellence for over 4 years.
+                Iporá Boutique operates through a network of carefully selected boutique residences throughout Uruguay. Families work with our team to choose a home that fits their loved one's personality, preferences, and care needs.
               </p>
             </div>
 
-            {/* Countdown */}
-            <div className="grid grid-cols-4 gap-4 max-w-lg mb-10">
-              {[
-                { value: timeLeft.days, label: 'Days' },
-                { value: timeLeft.hours, label: 'Hours' },
-                { value: timeLeft.minutes, label: 'Min' },
-                { value: timeLeft.seconds, label: 'Sec' },
-              ].map((t) => (
-                <div key={t.label} className="text-center border border-champagne/20 rounded-xl py-4 px-2">
-                  <div className="countdown-digit text-4xl md:text-5xl text-champagne font-light">
-                    {String(t.value ?? 0).padStart(2, '0')}
-                  </div>
-                  <div className="font-inter text-xs text-ivory/40 uppercase tracking-wide mt-1">{t.label}</div>
-                </div>
-              ))}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="mailto:residencialipor@gmail.com?subject=Inquiry%20about%20Ipor%C3%A1%20Boutique&body=Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20Ipor%C3%A1%20Boutique%20for%20my%20loved%20one."
+                className="cta-btn cta-btn-gold inline-flex items-center gap-2 px-8 py-4 rounded-full font-inter font-medium text-obsidian bg-champagne hover:brightness-110 transition-all"
+              >
+                Contact us <ArrowRight className="w-4 h-4" />
+              </a>
+              <a
+                href="https://wa.me/59898282938?text=Hello%20Nicol%C3%A1s%2C%20I%27m%20interested%20in%20Ipor%C3%A1%20Boutique"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cta-btn inline-flex items-center gap-2 px-8 py-4 rounded-full font-inter font-medium text-ivory border border-ivory/20 hover:bg-ivory/10 transition-all"
+              >
+                WhatsApp Nicolás
+              </a>
             </div>
-
-            <a
-              href="https://wa.me/59898282938?text=Hello%20Nicol%C3%A1s%2C%20I%27m%20interested%20in%20pre-booking%20at%20Residencial%20Boutique%20Rivera"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-btn cta-btn-gold inline-flex items-center gap-2 px-8 py-4 rounded-full font-inter font-medium text-obsidian bg-champagne hover:brightness-110 transition-all"
-            >
-              Talk to Nicolás — Co-Founder <ArrowRight className="w-4 h-4" />
-            </a>
           </div>
         </div>
       </section>
@@ -135,7 +126,7 @@ export default function Rivera() {
               We know the guilt that keeps you up at night. The fear that Mom fell and no one was there. The exhaustion of being the only one who notices Dad is eating less. The weight of loving someone so much — and not being able to give them everything they need, no matter how hard you try.
             </p>
             <p className="font-inter text-ivory/60 leading-relaxed mb-5">
-              Iporá Boutique is not a nursing facility. It is not a hospital. It is a boutique home — intimate, warm, and thoughtfully designed — where your parent or grandparent spends their remaining years living fully. Supported in their day-to-day life. Known by name, known by story, known by heart.
+              Iporá Boutique is not a nursing facility. It is not a hospital. It is a network of boutique homes across Uruguay — each one intimate, warm, and thoughtfully selected — where your parent or grandparent spends their years living fully. Supported in their day-to-day life. Known by name, known by story, known by heart.
             </p>
             <p className="font-inter text-ivory/60 leading-relaxed mb-6">
               Choosing Iporá Boutique for your loved one is not giving up. It is the highest form of care — giving them a life you genuinely could not provide alone. That takes courage. And love.
@@ -171,14 +162,14 @@ export default function Rivera() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-obsidian/80 to-transparent flex items-end p-8">
                   <div>
-                    <p className="font-cormorant text-2xl text-ivory">Rivera and Punta del Este, Uruguay</p>
-                    <p className="font-inter text-champagne/80 text-sm">Opening: August 1, 2026</p>
+                    <p className="font-cormorant text-2xl text-ivory">Boutique residences across Uruguay</p>
+                    <p className="font-inter text-champagne/80 text-sm">Iporá Boutique Care Network</p>
                   </div>
                 </div>
               </div>
               <div className="absolute -top-4 -right-4 bg-champagne rounded-2xl px-5 py-3">
                 <p className="font-cormorant text-obsidian text-lg">Limited spots</p>
-                <p className="font-inter text-obsidian text-xs">Opening August 1, 2026</p>
+                <p className="font-inter text-obsidian text-xs">Personalized placement</p>
               </div>
             </div>
           </RevealSection>
@@ -225,29 +216,152 @@ export default function Rivera() {
         </div>
       </section>
 
+      {/* Network section */}
+      <section className="py-20 border-t border-champagne/10">
+        <div className="max-w-5xl mx-auto px-5 md:px-10">
+          <RevealSection>
+            <div className="text-center mb-12">
+              <span className="font-inter text-xs text-champagne uppercase tracking-widest block mb-4">The Iporá Boutique Care Network</span>
+              <h2 className="font-cormorant text-4xl md:text-5xl text-ivory font-light mb-4">
+                Choose the home. We provide the care.
+              </h2>
+              <p className="font-inter text-ivory/50 text-sm max-w-2xl mx-auto leading-relaxed">
+                Iporá Boutique operates through a curated network of residential homes and trusted partners across Uruguay. Families are not confined to a single building — they participate in selecting the residence that best reflects their loved one's preferences, lifestyle, and care needs.
+              </p>
+            </div>
+          </RevealSection>
+
+          <RevealSection delay={80}>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+              {[
+                { icon: Camera, title: 'View residence photos', text: 'Browse photos of available homes within the Iporá network before making any decision.' },
+                { icon: MessageSquare, title: 'Request information', text: 'Ask questions about any residence — its location, layout, environment, and current availability.' },
+                { icon: Calendar, title: 'Schedule a visit', text: 'Arrange an in-person visit to any residence you are considering for your loved one.' },
+                { icon: Heart, title: 'Discuss care needs', text: 'Meet with the Iporá team before admission to ensure we understand your loved one fully.' },
+                { icon: Home, title: 'Participate in selection', text: 'Families are active participants in choosing the residence — not passive recipients of an assignment.' },
+                { icon: MapPin, title: 'Network across Uruguay', text: 'Through partnerships with real estate professionals, we can identify homes based on your preferred location and lifestyle.' },
+              ].map((item, i) => (
+                <div key={i} className="flex gap-4 p-5 border border-champagne/15 rounded-xl hover:border-champagne/35 transition-colors">
+                  <div className="w-9 h-9 rounded-lg bg-champagne/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <item.icon className="w-4 h-4 text-champagne" />
+                  </div>
+                  <div>
+                    <h3 className="font-inter text-ivory/90 text-sm font-medium mb-1">{item.title}</h3>
+                    <p className="font-inter text-ivory/40 text-xs leading-relaxed">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </RevealSection>
+
+          <RevealSection delay={150}>
+            <div className="border border-champagne/20 rounded-2xl p-7 bg-champagne/3">
+              <p className="font-inter text-ivory/40 text-xs uppercase tracking-widest mb-3">A note on residence visits</p>
+              <p className="font-inter text-ivory/60 text-sm leading-relaxed">
+                When visiting a residence, real estate representatives or property owners may be present — particularly if the home is vacant or newly available within our network. This is a natural part of our concierge-style placement process and reflects the premium, personalized approach Iporá Boutique takes in matching each resident with the right home. It is a feature, not a limitation.
+              </p>
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* Compliance section */}
+      <section className="py-16 border-t border-champagne/10" style={{ background: 'linear-gradient(135deg, #080808 0%, #0d1520 100%)' }}>
+        <div className="max-w-5xl mx-auto px-5 md:px-10">
+          <RevealSection>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              <div>
+                <span className="font-inter text-xs text-champagne uppercase tracking-widest block mb-4">Residence standards & compliance</span>
+                <h2 className="font-cormorant text-4xl text-ivory font-light leading-tight mb-5">
+                  Not every property qualifies.<br /><em className="text-champagne italic">Ours do.</em>
+                </h2>
+                <p className="font-inter text-ivory/60 text-sm leading-relaxed mb-4">
+                  Not all residential properties are suitable or legally approved for elderly care operations in Uruguay. Residences within the Iporá Boutique network must meet strict standards covering accessibility, safety infrastructure, emergency access, resident comfort, and applicable Uruguayan regulations.
+                </p>
+                <p className="font-inter text-ivory/60 text-sm leading-relaxed mb-4">
+                  Iporá Boutique maintains a portfolio of pre-approved residences whenever possible to ensure a smooth and confident admission process for families.
+                </p>
+                <p className="font-inter text-ivory/60 text-sm leading-relaxed">
+                  If a family has a specific property in mind, our team may evaluate it for suitability and compliance before it can be incorporated into the care network. Approval is subject to legal, safety, and operational requirements.
+                </p>
+              </div>
+              <div className="space-y-3">
+                {[
+                  'Accessibility standards for reduced mobility',
+                  'Emergency access and safety infrastructure',
+                  'Resident comfort and spatial requirements',
+                  'Compliance with Uruguayan elderly care regulations',
+                  'Pre-approved portfolio for immediate placement',
+                  'Custom property evaluation available upon request',
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3 p-4 border border-champagne/15 rounded-xl">
+                    <CheckCircle className="w-4 h-4 text-champagne flex-shrink-0" />
+                    <span className="font-inter text-ivory/60 text-sm">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* Shared living section */}
+      <section className="py-16 border-t border-champagne/10">
+        <div className="max-w-4xl mx-auto px-5 md:px-10">
+          <RevealSection>
+            <div className="text-center mb-10">
+              <span className="font-inter text-xs text-champagne uppercase tracking-widest block mb-4">Boutique shared living</span>
+              <h2 className="font-cormorant text-4xl text-ivory font-light mb-4">Small homes. Real community.</h2>
+              <p className="font-inter text-ivory/50 text-sm max-w-2xl mx-auto leading-relaxed">
+                Iporá Boutique residences operate as intimate shared-living environments. Depending on the size of the home, a small number of residents live together in a comfortable and personalized setting — for example, a three-bedroom residence may accommodate up to three residents.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="border border-champagne/20 rounded-2xl p-7">
+                <h3 className="font-cormorant text-xl text-champagne mb-3">What choosing a residence means</h3>
+                <p className="font-inter text-ivory/55 text-sm leading-relaxed">
+                  Selecting a residence within the Iporá Boutique network does not mean exclusive occupancy of the entire property. Families are choosing their preferred home environment while their loved one benefits from the professional care, oversight, and quality standards of the Iporá Boutique Care Network — alongside a small number of fellow residents in a genuinely homelike setting.
+                </p>
+              </div>
+              <div className="border border-champagne/20 rounded-2xl p-7">
+                <h3 className="font-cormorant text-xl text-champagne mb-3">The Iporá difference</h3>
+                <p className="font-inter text-ivory/55 text-sm leading-relaxed">
+                  What distinguishes Iporá Boutique from any standard care home is not the building — it is the model. Our team, our standards, our oversight, and our philosophy of care travel with every resident into every home within our network. The residence is the backdrop. The care is what matters.
+                </p>
+              </div>
+            </div>
+            <div className="mt-8 border border-champagne/30 rounded-2xl p-8 bg-champagne/5 text-center">
+              <p className="font-cormorant text-2xl text-ivory font-light italic leading-relaxed max-w-3xl mx-auto">
+                "At Iporá Boutique, we believe exceptional elderly care begins with the right home. Our concierge-style approach allows families to participate in selecting a residence that reflects their loved one's preferences while benefiting from the professional care, oversight, and quality standards of the Iporá Boutique Care Network."
+              </p>
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
       {/* Credibility anchor */}
       <section className="py-16 border-t border-champagne/10">
         <div className="max-w-4xl mx-auto px-5 md:px-10">
           <RevealSection>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
               <div>
-                <span className="font-inter text-xs text-champagne uppercase tracking-widest block mb-4">Our guarantee</span>
+                <span className="font-inter text-xs text-champagne uppercase tracking-widest block mb-4">Our foundation</span>
                 <h2 className="font-cormorant text-4xl text-ivory font-light leading-tight mb-5">
-                  We don't sell dreams.<br /><em className="text-champagne italic">We sell proven results.</em>
+                  Proven care model.<br /><em className="text-champagne italic">Established track record.</em>
                 </h2>
                 <p className="font-inter text-ivory/60 text-sm leading-relaxed mb-4">
-                  Residencial Iporá in Tacuarembó has been operating for over 4 years. Families who chose to trust and kept trusting. That can't be invented. It's the only résumé that matters.
+                  Residencial Iporá in Tacuarembó has been operating for over 4 years. Families who chose to trust us — and kept choosing us. That cannot be invented. It is the only credential that matters.
                 </p>
                 <p className="font-inter text-ivory/60 text-sm leading-relaxed">
-                  Iporá Boutique doesn't physically exist yet — it exists in the plans, the date, and the will of those building it. If you need certainties before they're due, this project is not for you. If you value vision and track record, welcome.
+                  Iporá Boutique brings this same care model — the same team, the same standards, the same philosophy — into a network of boutique homes across Uruguay. The address changes. The commitment does not.
                 </p>
               </div>
               <div className="space-y-4">
                 {[
-                  { number: '4+', label: 'Years of continuous operation in Tacuarembó' },
+                  { number: '4+', label: 'Years of continuous care operation in Tacuarembó' },
                   { number: '100%', label: 'Families who chose to renew month after month' },
-                  { number: '01/08', label: 'Confirmed opening date — 2026' },
-                  { number: 'Limited', label: 'Spots per boutique — no exceptions' },
+                  { number: 'Network', label: 'Of pre-approved boutique residences across Uruguay' },
+                  { number: 'Limited', label: 'Spots per residence — by design, not by circumstance' },
                 ].map((stat) => (
                   <div key={stat.label} className="flex items-center gap-4 border border-champagne/15 rounded-xl px-5 py-4">
                     <span className="font-cormorant text-2xl text-champagne font-light w-24 flex-shrink-0">{stat.number}</span>
