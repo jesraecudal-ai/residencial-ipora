@@ -286,13 +286,13 @@ export default function Rivera() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-3 grid-rows-2 gap-2 h-80 md:h-[28rem]">
             <div className="col-span-2 row-span-2 overflow-hidden rounded-2xl">
-              <img src="https://images.unsplash.com/photo-1576765608866-5b51046452be?w=900&q=80" alt="Caregiver and elderly person" className="w-full h-full object-contain bg-black/40 hidden" />
+              
             </div>
             <div className="overflow-hidden rounded-2xl">
               <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80" alt="Warm elderly care moment" className="w-full h-full object-contain bg-black/40" />
             </div>
             <div className="overflow-hidden rounded-2xl">
-              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80" alt="Caregiver with resident" className="w-full h-full object-contain bg-black/40 hidden" />
+              
             </div>
           </div>
           <div className="grid grid-cols-3 gap-2 mt-2 h-40 md:h-52">
