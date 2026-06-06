@@ -23,12 +23,12 @@ function useCountdown(targetDate) {
 }
 
 const carouselPhotos = [
-{ url: 'https://images.unsplash.com/photo-1576765608866-5b51046452be?w=1800&q=80', alt: 'Caregiver and elderly person sharing a happy moment' },
-{ url: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1800&q=80', alt: 'Elderly couple enjoying time together' },
-{ url: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1800&q=80', alt: 'Group activity in a warm care home' },
-{ url: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1800&q=80', alt: 'Caregiver holding hands with elderly resident' },
-{ url: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=1800&q=80', alt: 'Bright comfortable living space' },
-{ url: 'https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=1800&q=80', alt: 'Warm family-like home environment' }];
+{ url: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1800&q=80', alt: 'Caregiver and elderly residents enjoying activities together' },
+{ url: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1800&q=80', alt: 'Caregiver gently holding hands with elderly resident' },
+{ url: 'https://images.unsplash.com/photo-1576765608866-5b51046452be?w=1800&q=80', alt: 'Warm moment between caregiver and elderly person' },
+{ url: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1800&q=80', alt: 'Elderly resident enjoying a peaceful afternoon at home' },
+{ url: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1800&q=80', alt: 'Cozy home dining room with warm light' },
+{ url: 'https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=1800&q=80', alt: 'Warm, welcoming living space in a boutique care home' }];
 
 
 function CarouselSection() {
