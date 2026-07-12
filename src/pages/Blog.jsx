@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { ArrowRight, Clock, Tag, Eye } from 'lucide-react';
+import { demenciaPosts } from '@/data/blogPostsDemencia';
 
 function useViewCount(slug) {
   const key = `blog_views_${slug}`;
@@ -704,11 +705,21 @@ export default function Blog() {
             ✦ Iporá Boutique
           </button>
           <button
+            onClick={() => setTab('demencia')}
+            className={`font-inter text-sm font-medium px-5 py-2 rounded-full border transition-all ${
+              tab === 'demencia'
+                ? 'bg-navy text-white border-navy'
+                : 'text-slate-mist border-slate-200 hover:border-navy hover:text-navy'
+            }`}
+          >
+            🧠 Demencia & Alzheimer
+          </button>
+          <button
             onClick={() => setTab('all')}
             className={`font-inter text-sm font-medium px-5 py-2 rounded-full border transition-all ${
               tab === 'all'
-                ? 'bg-navy text-white border-navy'
-                : 'text-slate-mist border-slate-200 hover:border-navy hover:text-navy'
+                ? 'bg-slate-700 text-white border-slate-700'
+                : 'text-slate-mist border-slate-200 hover:border-slate-700 hover:text-slate-700'
             }`}
           >
             Ver todos
@@ -800,6 +811,42 @@ export default function Blog() {
                 </a>
               </div>
             </RevealSection>
+          </div>
+        </section>
+      )}
+
+      {/* Demencia Posts */}
+      {(tab === 'demencia' || tab === 'all') && (
+        <section className="py-10 bg-sanctuary">
+          <div className="max-w-7xl mx-auto px-5 md:px-10">
+            {tab === 'all' && (
+              <div className="mb-8">
+                <h2 className="font-cormorant text-3xl text-navy font-light">Demencia & Alzheimer</h2>
+                <p className="font-inter text-slate-mist text-sm mt-1">Guías especializadas para familias de Uruguay y Argentina</p>
+              </div>
+            )}
+            {tab === 'demencia' && (
+              <div className="mb-10 border border-navy/20 rounded-2xl p-6 bg-navy">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-xl">🧠</span>
+                  <span className="font-inter text-white/80 text-sm uppercase tracking-widest">Guías especializadas en demencia</span>
+                </div>
+                <h2 className="font-cormorant text-3xl text-white font-light mb-2">Demencia & Alzheimer en Uruguay y Argentina</h2>
+                <p className="font-inter text-white/60 text-sm mb-4">Información confiable para familias que cuidan a un ser querido con demencia. Artículos detallados sobre síntomas, etapas, cuidado y opciones en la región.</p>
+              </div>
+            )}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {demenciaPosts.map((post, i) => (
+                <RevealSection key={post.slug} delay={i * 60}>
+                  <PostCard
+                    post={post}
+                    isBoutique={false}
+                    onSelect={handleSelect}
+                    isSelected={selected === post.slug}
+                  />
+                </RevealSection>
+              ))}
+            </div>
           </div>
         </section>
       )}
