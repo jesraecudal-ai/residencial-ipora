@@ -34,9 +34,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-5 md:px-10 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-full bg-trust-blue flex items-center justify-center">
-            <Heart className="w-4 h-4 text-white fill-white" />
-          </div>
+          <img
+            src="https://media.base44.com/images/public/6a050510a0e721e56d922807/e82957fc1_Residencialiporalogo.jpeg"
+            alt="Residencial Iporá Logo"
+            className="h-10 w-10 rounded-full object-cover"
+          />
           <span className="font-cormorant text-2xl font-light text-navy tracking-wide">
             Residencial Iporá
           </span>
